@@ -1,14 +1,32 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
+\usepackage{pgffor}
 
-\title{linalg-modul1}
-\author{sirosen }
+% för att enkelt formattera lösningar
+\newenvironment{solution}[1]
+    {{\large\textbf{#1}}\newline}
+    {\newline}
+
+\usepackage{subfiles} % Best loaded last in the preamble 
+
+\title{SF1624 - Algebra och geometri\\ detaljerade lösningar till \\"Uppgifter att börja med"\\modul 1}
+\author{Simon Rosén}
 \date{October 2022}
 
 \begin{document}
 
 \maketitle
 
-\section{Introduction}
+\section{Teori}
+
+\section{Uppgifter}
+
+% include på alla uppgifter
+\foreach \i in {1, ..., 99} {
+    \edef\FileName{uppgifter/\i}%
+    \IfFileExists{\FileName}{%
+       \subfile{\FileName}%
+    }
+}
 
 \end{document}
