@@ -2,4 +2,7 @@
 lösningar till rekommenderade uppgifter för modul 1
 
 ## 1. uppgifter att börja med
-- [] 1
+- [ ] 1
+- [ ] 2
+- [ ] 3
+- [ ] 4
