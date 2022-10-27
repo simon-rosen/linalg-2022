@@ -1,0 +1,17 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{5}
+Kom ihåg att enhetsvektorer är vektorer av längd ett och att ortogonal betyder vinkelträt (dvs två vektorer är ortogonala om vinkeln mellan dom är $90^\circ$ eller $\frac{\pi}{2}$ radiener).
+
+Det här är ett typiskt tillfälle där kryssprodukten (formel \ref{kryssprod}) är användbar, eftersom att den ger just en vektor som är ortogonal mot de vektorer man tar kryssprodukten av. Jag tar fram den direkt med hjälp av formel \ref{kryssprod}
+\[(2, -6, -3)\times (4, 3, -1) = (6 - (-9), -12 - (-2), 6 - (-24)) = (15, -10, 30)\]
+
+Längden av den här vectorn tas fram med \ref{veclength} och är \(\sqrt{15^2 + (-10)^2 + 30^2} = \sqrt{1225}\). En av de enhetsvektorer vi söker är alltså enligt formel \ref{unitvec} 
+\[\frac{1}{\sqrt{1225}}\cdot(15, -10, 30)\].
+Den andra pekar åt motsatt håll och är alltså 
+\[\frac{-1}{\sqrt{1225}}\cdot(15, -10, 30)\]
+
+Man skulle kunna förenkla ytterligare om man vill för $\sqrt{1225} = 35$ (vilket inte alls är uppenbart om man saknar miniräknare)
+\[\frac{1}{\sqrt{1225}}\cdot(15, -10, 30) = \frac{1}{35}\cdot(15, -10. 30) = \frac{1}{7}\cdot(3, -2, 6)\]
+\end{solution}
+\end{document}
