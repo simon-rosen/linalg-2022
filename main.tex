@@ -6,37 +6,10 @@
 \usepackage{amsmath}
 \usepackage{tikz}
 \usepackage{tkz-euclide}
+\usepackage{pdfpages}
 
-% för att enkelt formattera lösningar
-\newenvironment{solution}[1]
-    {{\Large\textbf{#1.}}\newline}
-    {\newline}
-
-\newcommand{\subsolution}[1]{{\large\textbf{#1)}\newline}}
-
-% för att skapa "formler"
-\newtheorem{formel}{Formel}
-
-% kommando för att skriva R^n
-\newcommand{\Rn}[1]{\mathbb{R}^{#1}}
-
-% environment för att enkelt skapa rutnät där man kan rita vektorer
-\newenvironment{vectors2d}[4]
-{
-\begin{center}
-\begin{tikzpicture}[scale=0.5]
-  \draw[thin,gray!40] (#1,#2) grid (#3,#4);
-  \draw[<->] (#1,0)--(#3,0) node[right]{$x$};
-  \draw[<->] (0,#2)--(0,#4) node[above]{$y$};
-}
-{
-\end{tikzpicture}
-\end{center}
-}
-% Lägg in sånna här för att rita vektorer:
-% \draw[line width=1pt,gray!40,-stealth](2,3)--(1,-2) node[anchor=south west]{$\vec{u}$};
-% om man vill färga den:
-% \draw[line width=1pt,blue,-stealth](2,3)--(1,-2) node[anchor=south west]{$\vec{u}$};
+% lägg till egna macros
+\input{macros}
 
 \usepackage{subfiles} % inkluderar allt innan i subfiles, så bör komma sist.
 
@@ -46,6 +19,8 @@
 \date{October 2022}
 
 \begin{document}
+
+%\includepdf[pages=-]{pdfs/22Modul1.pdf} % ska nog inte vara med i slutgiltig version, men nice att ha när man löser uppgifterna
 
 \maketitle
 \section{Teori}
