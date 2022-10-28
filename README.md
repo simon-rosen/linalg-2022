@@ -1,5 +1,5 @@
 # linalg-2022
-lösningar till rekommenderade uppgifter i kursen SF1624 - Algebra och geometri. 
+Lösningar till rekommenderade uppgifter i kursen SF1624 - Algebra och geometri. De uppgifter som löses här är de som finns i pdferna i `pdfs`.
 
 ## Hur får man pdfen?
 Den senaste versionen av pdfen finns i filen `linalg-2022.pdf`
