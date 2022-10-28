@@ -1,4 +1,4 @@
-# linalg-modul1
+# linalg-2022
 lösningar till rekommenderade uppgifter i kursen.
 
 # Modul 1
