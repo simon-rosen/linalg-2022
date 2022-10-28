@@ -28,3 +28,18 @@
 % \draw[line width=1pt,gray!40,-stealth](2,3)--(1,-2) node[anchor=south west]{$\vec{u}$};
 % om man vill färga den:
 % \draw[line width=1pt,blue,-stealth](2,3)--(1,-2) node[anchor=south west]{$\vec{u}$};
+
+
+
+
+%% inkludera alla lösningar i en mapp 
+\newcommand{\inkluderauppgifter}[2]{
+\foreach \i in {1, ..., #2} {
+    \edef\FileName{#1/\i}%
+    \IfFileExists{\FileName}{%
+       \subfile{\FileName}%
+    }{%else
+        {\color{red} lösning saknas till uppgift \i\newline}%
+    }%
+}%
+}

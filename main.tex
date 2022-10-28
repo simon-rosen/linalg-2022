@@ -1,12 +1,15 @@
 %& preamble - kommer användas i subfiles med
 \documentclass{article}
 \usepackage[utf8]{inputenc}
+\usepackage[swedish]{babel}
 \usepackage{parskip}
 \usepackage{pgffor}
 \usepackage{amsmath}
 \usepackage{tikz}
 \usepackage{tkz-euclide}
 \usepackage{pdfpages}
+\usepackage{hyperref}
+\usepackage{xcolor}
 
 % lägg till egna macros
 \input{macros}
@@ -14,93 +17,50 @@
 \usepackage{subfiles} % inkluderar allt innan i subfiles, så bör komma sist.
 
 
-\title{SF1624 - Algebra och geometri\\ {\large detaljerade lösningar till rekommenderade uppgifter för modul 1}}
-\author{Simon Rosén, Harald Olin}
+\title{SF1624 - Algebra och geometri\\ {\large detaljerade lösningar till rekommenderade uppgifter}}
+\author{work in progress, hämta senaste versionen på\\ \url{https://github.com/simon-rosen/linalg-2022}}
 \date{October 2022}
 
 \begin{document}
 
-%\includepdf[pages=-]{pdfs/22Modul1.pdf} % ska nog inte vara med i slutgiltig version, men nice att ha när man löser uppgifterna
-
 \maketitle
-\section{Teori}
-
-Vektorerna i dessa exempel är tre dimensioner ($\Rn{3}$). Men formlerna fungerar på liknande sätt för en godtycklig dimension ($\Rn{n}$).
-
-\begin{formel}{(vektoraddition)}\\
-\label{vecadd}
-Två vektorer $\vec{u} = (u_1, u_2, u_3)$ och $\vec{v} = (v_1, v_2, v_3)$ adderas såhär:
-\[
-\vec{u} + \vec{v} = (u_1 + v_1, u_2 + v_2, u_3 + v_3)
-\]
-
-Kom ihåg att $\vec{u} - \vec{v} = \vec{u} + (-1)\cdot\vec{v}$
-\end{formel}
-
-\begin{formel}{(vektormultiplikation med ett tal)}\\
-\label{vecscale}
-Ett tal $t$ och en vektor $\vec{u} = (u_1, u_2, u_3)$ multipliceras såhär:
-\[
-t \cdot \vec{u} = (t \cdot u_1, t \cdot u_2, t \cdot u_3)
-\]
-\end{formel}
+\tableofcontents
+\section{modul 1}
+\includepdf[pages=-]{pdfs/22Modul1.pdf} % ska nog inte vara med i slutgiltig version, men nice att ha när man löser uppgifterna
 
 
-\begin{formel}
-\label{veclength}
-Längden $|\vec{v}|$ av en vektor $\vec{v} = (x, y, z)$ fås genom:
-\[
-|\vec{v}| = \sqrt{x^2+y^2+z^2}
-\]
+\subsection{Teori}
+\subfile{modul1/teori}
 
-\end{formel}
-
-\begin{formel}
-\label{unitvec}
-En enhetsvektor $\vec{e}_\vec{v}$ i samma riktning som en vektor $\vec{v}$ fås genom:
-\[
-    \vec{e}_{\vec{v}} = \frac{1}{|\vec{v}|} \cdot \vec{v} 
-\]
-
-Man skalar alltså om vektorn så att den får längd ett.
-\end{formel}
-
-\begin{formel}{(skalärprodukt)}
-\label{skalarprod}
-Skalärprodukten av två vektorer $\vec{u} = (u_1, u_2, u_3)$ och $\vec{v} = (v_1, v_2, v_3)$ är:
-\[
-\vec{u} \cdot \vec{v} = u_1 \cdot v_1 + u_2 \cdot v_2 + u_3 \cdot v_3
-\]
-
-En annan formel som kan användas är: 
-\[
-\vec{u} \cdot \vec{v} = |\vec{u}||\vec{v}|sin(\alpha)
-\]
-Där $\alpha$ är vinkeln mellan vektorerna $\vec{u}$ och $\vec{v}$. Denna formel är särskilt användbar om man vill räkna ut vinkeln mellan två vektorer.
-
-Skalärprodukten av två vektorer är ett tal.
-\end{formel}
-
-\begin{formel}{(krysspordukt)}
-\label{kryssprod} 
-Kryssprodukten av två vektorer $\vec{u} = (u_1, u_2, u_3)$ och $\vec{v} = (v_1, v_2, v_3)$ är
-\[\vec{u}\times \vec{v} = (u_2\cdot v_3 - u_3\cdot v_2, u_2\cdot v_3 - u_3\cdot v_2, u_2\cdot v_3 - u_3\cdot v_2)\]
-
-En annan formel som kan användas för att beräkna kryssprodukten är
-\[\vec{u}\times \vec{v} = |\vec{u}||\vec{v}|sin(\alpha)\]
-Där $\alpha$ är vinkeln mellan $\vec{u}$ och $\vec{v}$.
-
-En viktig egenskap kryssprodukten $\vec{u}\times\vec{v}$ är att den är en vektor som är ortogonal mot båda vektorerna $\vec{u}$ och $\vec{v}$.
-\end{formel}
-
-\section{Uppgifter}
-
+\subsection{Uppgifter att börja med}
 % include på alla uppgifter
-\foreach \i in {1, ..., 99} {
-    \edef\FileName{uppgifter/\i}%
-    \IfFileExists{\FileName}{%
-       \subfile{\FileName}%
-    }
-}
+\inkluderauppgifter{modul1/uppgifter_att_borja_med}{26}
+
+
+\section{modul 2}
+%\includepdf[pages=-]{pdfs/22Modul2.pdf} % ska nog inte vara med i slutgiltig version, men nice att ha när man löser uppgifterna
+% include på alla uppgifter
+\inkluderauppgifter{modul2/uppgifter_att_borja_med}{22}
+
+
+\section{modul 3}
+%\includepdf[pages=-]{pdfs/22Modul3.pdf} % ska nog inte vara med i slutgiltig version, men nice att ha när man löser uppgifterna
+\inkluderauppgifter{modul3/uppgifter_att_borja_med}{19}
+
+
+\section{modul 4}
+%\includepdf[pages=-]{pdfs/22Modul4.pdf} % ska nog inte vara med i slutgiltig version, men nice att ha när man löser uppgifterna
+\inkluderauppgifter{modul4/uppgifter_att_borja_med}{21}
+
+
+\section{modul 5}
+%\includepdf[pages=-]{pdfs/22Modul5.pdf} % ska nog inte vara med i slutgiltig version, men nice att ha när man löser uppgifterna
+\inkluderauppgifter{modul5/uppgifter_att_borja_med}{15}
+
+
+\section{modul 6}
+%\includepdf[pages=-]{pdfs/22Modul6.pdf} % ska nog inte vara med i slutgiltig version, men nice att ha när man löser uppgifterna
+\inkluderauppgifter{modul6/uppgifter_att_borja_med}{19}
+
 
 \end{document}
