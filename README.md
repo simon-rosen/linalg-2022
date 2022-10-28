@@ -1,5 +1,7 @@
 # linalg-modul1
-lösningar till rekommenderade uppgifter för modul 1
+lösningar till rekommenderade uppgifter i kursen.
+
+# Modul 1
 
 ## 1. uppgifter att börja med
 - [x] 1
