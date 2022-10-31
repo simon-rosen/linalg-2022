@@ -1,0 +1,22 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{12} 
+
+Den här uppgiften bygger vidare på uppgift 11 så se till att göra den först.
+
+En parameterframställning av en linje som inte skär planet ska innehålla
+\begin{itemize}
+    \item En punkt som inte ligger i planet.
+    \item En vektor som är parallell med planet (det här är viktigt för annars kommer den skära planet någon gång).
+\end{itemize}
+
+Vi har en vektor $\vec{v} = (-1, 1, 0)$ som är parallell med planet från uppgift 11. Det enda vi behöver nu är en punkt som inte ligger i planet. En sådan punkt ska uppfylla $x + y + z \neq 1$. Vi testar med origo (0, 0, 0)
+
+\[0 + 0 + 0 = 0 \neq 1\]
+
+Nu har vi allt som krävs
+
+\[(x, y, z) = (0, 0, 0) + t \cdot (-1, 1, 0) = t \cdot (-1, 1, 0), t \in R\]
+
+\end{solution}
+\end{document}

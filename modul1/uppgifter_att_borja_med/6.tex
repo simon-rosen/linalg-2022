@@ -1,0 +1,31 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{6}
+
+Uppgifter där man ska visa saker kan vara lite svåra att börja med, men ofta kan man börja testa sig fram med hjälp av den info som ges.
+
+Här handlar det om ortogonalitet så då skulle man kunna börja testa att använda skalärprodukten (formel \ref{skalarprod}), eftersom att den ska vara 0 om två vektorer är ortogonala
+
+\[
+(\Vec{u} + \Vec{v}) \cdot (\Vec{u} - \Vec{v}) = (u_1 + v_1) \cdot (u_1 - v_1) + (u_2 + v_2) \cdot (u_2 - v_2) + ... + (u_n + v_n) \cdot (u_n - v_n) =
+\]
+
+Notera att varje term i högerledet går att utveckla med konjugatregeln. Då får vi 
+
+\[
+= (u_1^2 - v_1^2) + (u_2^2 - v_2^2) + ... +  (u_n^2 - v_n^2) =
+\]
+
+Uppgiften handlar ju också om att vektorerna ska ha samma längd och detta börjar ju likna formeln för vektorers längd (formel \ref{veclength}) lite. Jag skriver om den såhär
+
+\begin{multiline}
+= (u_1^2 + u_2^2 + ... + u_n^2) - (v_1^2 + v_2^2 + ... + v_n^2) =
+\sqrt{(u_1^2 + u_2^2 + ... + u_n^2)} - \sqrt{(v_1^2 + v_2^2 + ... + v_n^2)} = |\Vec{u}|^2 - |\Vec{v}|^2 = 0 \\
+\iff |\Vec{u}|^2 = |\Vec{v}|^2 \\
+\iff |\Vec{u}| = \pm |\Vec{v}|
+\end{multiline}
+
+En vektors längd är ju positiv så \(|\Vec{u}| = |\Vec{v}|\)
+
+\end{solution}
+\end{document}

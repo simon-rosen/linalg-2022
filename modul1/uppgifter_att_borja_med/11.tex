@@ -1,0 +1,23 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{11} 
+
+Följande behövs för parameterframställningen av en linje som ligger i planet
+\begin{itemize}
+    \item En punkt i planet.
+    \item En vektor som är parallell med planet.
+\end{itemize}
+
+$x + y + z = 1$ uppfylls t.ex. av punkten (1, 0, 0), så här har vi en punkt som ligger i planet.
+
+En vektor som är parallell med planet ska vara ortogonal med planets normalvektor. Vi ser från planets ekvation att denna är $\Vec{n} = (1, 1, 1)$. Använder skalärprodukten (formel \ref{skalarprod}) för att ta fram en vektor $\Vec{v}$ som är ortogonal mot $\Vec{n}$
+
+\[\Vec{n} \cdot \Vec{v} = (1, 1, 1) \cdot (v_1, v_2, v_3) =
+v_1 + v_2 + v_3 = 0\]
+
+Detta uppfylls t.ex. av $v_1 = -1, v_2 = 1, v_3 = 0$. En parameterframställning av linjen är alltså
+
+\[(x, y, z) = (1, 0, 0) + t \cdot (-1, 1, 0), t\in R\]
+
+\end{solution}
+\end{document}

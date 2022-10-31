@@ -1,0 +1,39 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{9}
+En parameterform för ett plan består av
+\begin{itemize}
+    \item 1 punkt som ligger i planet.
+    \item 2 vektorer som är parallella med planet.
+\end{itemize}
+
+Vi har tre punkter som ligger i planet. Man kan välja en av dessa som 'startpunkt' och sedan ta fram de två vektorerna genom subtraktion. Låt oss välja (1, 2, 0) som startpunkt, då ser det ut såhär
+
+\begin{center}
+\begin{tikzpicture}
+% rita punkter
+\tkzDefPoint(0,0){Start}
+\tkzLabelPoint[left](Start){$(1, 2, 0)$}
+\tkzDefPoint(5,2){A}
+\tkzLabelPoint[right](A){$(2, 1, 1)$}
+\tkzDefPoint(5,-2){B}
+\tkzLabelPoint[right](B){$(0, -1, 5)$}
+\tkzDrawSegment[gray!40](Start,A)
+\tkzDrawSegment[gray!40](Start,B)
+
+\foreach \n in {Start, A, B}
+  \node at (\n)[circle,fill,inner sep=1.5pt]{};
+\end{tikzpicture}
+\end{center}
+
+En vektor från (1, 2, 0) till (2, 1, 1) är
+\[(2, 1, 1) - (1, 2, 0) = (1, -1, 1)\]
+
+En vektor från (1, 2, 0) till (0, -1, 5) är
+\[(0, -1, 5) - (1, 2, 0) = (-1, -3, 5)\]
+
+En parameterframställning för planet är alltså
+\[(x, y, z) = (1, 2, 0) + s \cdot (1, -1, 1) + t \cdot (-1, -3, 5) \text{ där } s, t \in R\]
+
+\end{solution}
+\end{document}

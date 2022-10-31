@@ -39,7 +39,9 @@
     \IfFileExists{\FileName}{%
        \subfile{\FileName}%
     }{%else
-        {\color{red} lösning saknas till uppgift \i\newline}%
+        {\begin{solution}{{\color{red} \i}}%
+        {\color{red} lösning saknas}
+        \end{solution}}%
     }%
 }%
 }

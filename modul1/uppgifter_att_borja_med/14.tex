@@ -1,0 +1,24 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{14}
+
+Skärningspunkter mellan linjen och planet ska uppfylla
+\begin{itemize}
+    \item Linjens ekvation
+    \item Planets ekvation
+\end{itemize}
+
+Linjens ekvation $(x, y, z) = (1, 2, 2) + t \cdot (-1, 2, 0), t \in R$ kan också skrivas som $(x, y, z) = (1-t, 2+2t, 2)$. Vi sätter in dessa $x, y, z$ i planets ekvation
+\begin{align*}
+x + 2y - z = 1 \\
+(1-t) + 2(2 +2t) - (2) = 1 \\
+3t + 3 = 1 \\
+t = \frac{-2}{3}
+\end{align*}
+
+Detta betyder att när $t = \frac{-2}{3}$ så skär linjen planet. Vi tar fram skärningspunkten genom att sätta in detta värde på t i linjens ekvation
+
+\[(x, y, z) = (1, 2, 2) + \frac{-2}{3} \cdot (-1, 2, 0) = (1, 2, 2) - (-\frac{2}{3}, \frac{4}{3}, 0) = (1 + \frac{2}{3}, 2 - \frac{4}{3}, 2 - 0) = (\frac{5}{3}, \frac{2}{3}, 2)\]
+
+\end{solution}
+\end{document}

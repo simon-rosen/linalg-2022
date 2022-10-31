@@ -1,0 +1,24 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{10}
+
+Den här uppgiften är lite klurig. Vi vet från formel \ref{parameterplan} att man för att kunna beskriva ett plan på parameterform behöver en punkt och två vektorer, men vi har bara en punkt och en linje. Men eftersom att vi har fått en linje som ligger i planet 
+\[(x, y, z) = t\cdot (-1, 0, 2) = (0, 0, 0) + t\cdot (-1, 0, 2)\]
+kan vi ta en punkt på denna linje för att få fram en vektor som är parallell med planet. Låt till exempel $t = 0$, då får vi en punkt i planet
+\[(x, y, z) = 0 \cdot (-1, 0, 2) = (0, 0, 0)\]
+
+En vektor som är parallell med planet är då
+\[(1, 1, 0) - (0, 0, 0) = (1, 1, 0)\] 
+
+Vi har nu allt som krävs för att skriva planet på parameterform
+\begin{itemize}
+    \item två punkter: (1, 1, 0) och origo (0, 0, 0). Det är enklast att välja origo.
+    \item två vektorer som är parallella med planet: (-1, 0, 2) och (1, 1, 0).
+\end{itemize}
+
+Parameterframställningen blir därför
+\[(x, y, z) = (0, 0, 0) + s \cdot (-1, 0, 2) + t \cdot (1, 1, 0) = 
+s \cdot (-1, 0, 2) + t \cdot (1, 1, 0) \text{ där } s, t \in R\]
+
+\end{solution}
+\end{document}

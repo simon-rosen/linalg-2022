@@ -49,6 +49,16 @@ Man skalar alltså om vektorn så att den får längd ett.
 \end{formel}
 
 
+%% vektor mellan två punkter
+\begin{formel}
+\label{vecbetweendots}
+En vektor som går från punkten $P = (p_1, p_2, p_3)$ till punkten $Q = (q_1, q_2, q_3)$ fås genom
+$$\vec{OQ} - \vec{OP} = (q_1, q_2, q_3) - (p_1, p_2, p_3)$$
+
+Notera att $\vec{OP}$ och $\vec{OQ}$ är punkternas ortsvektorer (vektorer från origo till punkten), för tekniskt sätt kan man inte addera två punkter.
+\end{formel}
+
+
 %% skalärprodukten
 \begin{formel}{(skalärprodukt)}
 \label{skalarprod}
@@ -59,7 +69,7 @@ Skalärprodukten av två vektorer $\vec{u} = (u_1, u_2, u_3)$ och $\vec{v} = (v_
 
 En annan formel som kan användas är: 
 \[
-\vec{u} \cdot \vec{v} = |\vec{u}||\vec{v}|sin(\alpha)
+\vec{u} \cdot \vec{v} = |\vec{u}||\vec{v}|cos(\alpha)
 \]
 Där $\alpha$ är vinkeln mellan vektorerna $\vec{u}$ och $\vec{v}$. Denna formel är särskilt användbar om man vill räkna ut vinkeln mellan två vektorer.
 
@@ -67,35 +77,27 @@ Skalärprodukten av två vektorer \underline{är ett tal}.
 \end{formel}
 
 
-%% kryssprodukten
-\begin{formel}{(kryssprodukt)}
-\label{kryssprod} 
-Kryssprodukten av två vektorer $\vec{u} = (u_1, u_2, u_3)$ och $\vec{v} = (v_1, v_2, v_3)$ är
-\[\vec{u}\times \vec{v} = (u_2\cdot v_3 - u_3\cdot v_2, u_2\cdot v_3 - u_3\cdot v_2, u_2\cdot v_3 - u_3\cdot v_2)\]
-
-En viktig egenskap kryssprodukten $\vec{u}\times\vec{v}$ är att den \underline{är en vektor} som är ortogonal mot båda vektorerna $\vec{u}$ och $\vec{v}$.
-\end{formel}
-
-
-%% kryssproduktens storlek
-\begin{formel}
-\label{kryssprodsize} 
-Storleken av kryssprodukten av två vektorer $\vec{u}$ och $\vec{v}$ är
-\[|\vec{u}\times \vec{v}| = |\vec{u}||\vec{v}|sin(\alpha)\]
-Där $\alpha$ är vinkeln mellan $\vec{u}$ och $\vec{v}$.
-\end{formel}
-
-
 %% parameterframställning av linje
 \begin{formel}
 \label{parameterlinje} 
 En linje kan beskrivas med en parameterframställning om man har en punkt $P = (p_1, p_2, p_3)$ och en vektor $\vec{v}=(v_1, v_2, v_3)$ som pekar i linjens riktning (som man skalar om med ett tal $t \in R$ för att kunna komma till alla punkter på linjen)
-\[L = P + t \cdot \vec{v} = (p_1, p_2, p_3) + t\cdot (v_1, v_2, v_3)\]
+\[(x, y, z) = P + t \cdot \vec{v} = (p_1, p_2, p_3) + t\cdot (v_1, v_2, v_3)\]
 \end{formel}
 
 
+%% parameterframställning av plan
+\begin{formel}
+\label{parameterplan} 
+Ett plan kan beskrivas med en parameterframställning om man har en punkt $P = (p_1, p_2, p_3)$ samt två vektor $\vec{v}=(v_1, v_2, v_3)$ och $\vec{u}=(u_1, u_2, u_3)$ som är parallella med planet (om man skalar dessa vektorer med två tal $s, t \in R$ ska man kunna komma till alla punkter i planet)
+\[(x, y, z) = P + s \cdot \vec{u} + t \cdot \vec{v} = (p_1, p_2, p_3) + s\cdot (u_1, u_2, u_3) + t \cdot (v_1, v_2, v_3)\]
+\end{formel}
 
 
+%% normalvektor till plan
+\begin{formel}
+\label{normalplan} 
+Ett plan som beskrivs med en ekvation $ax + by + cz = d$ har en normalvektor $\vec{n} = (a, b, c)$ som har en rät vinkel till planet.
+\end{formel}
 
 
 \end{document}
