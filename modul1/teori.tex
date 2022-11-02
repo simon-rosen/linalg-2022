@@ -55,7 +55,7 @@ Man skalar alltså om vektorn så att den får längd ett.
 En vektor som går från punkten $P = (p_1, p_2, p_3)$ till punkten $Q = (q_1, q_2, q_3)$ fås genom
 $$\vec{OQ} - \vec{OP} = (q_1, q_2, q_3) - (p_1, p_2, p_3)$$
 
-Notera att $\vec{OP}$ och $\vec{OQ}$ är punkternas ortsvektorer (vektorer från origo till punkten), för tekniskt sätt kan man inte addera två punkter.
+Notera att $\vec{OP}$ och $\vec{OQ}$ är punkternas ortsvektorer (vektorer från origo till punkten), för tekniskt sätt kan man inte addera / subtrahera två punkter.
 \end{formel}
 
 
@@ -97,6 +97,14 @@ Ett plan kan beskrivas med en parameterframställning om man har en punkt $P = (
 \begin{formel}
 \label{normalplan} 
 Ett plan som beskrivs med en ekvation $ax + by + cz = d$ har en normalvektor $\vec{n} = (a, b, c)$ som har en rät vinkel till planet.
+\end{formel}
+
+%% projectionsformeln
+\begin{formel}
+\label{projektionsformeln} 
+För att projicera en vektor $\vec{u}$ på en annan vektor $\vec{v}$ kan vi använda projektionsformeln
+$$proj_{\vec{v}}(\vec{u})=\frac{\vec{v}\cdot\vec{u}}{|\vec{v}|^2}\cdot\vec{v}$$
+
 \end{formel}
 
 

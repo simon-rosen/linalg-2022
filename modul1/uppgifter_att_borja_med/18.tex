@@ -22,6 +22,61 @@ z = 19 - 2x - 3y\\
 Enligt formel \ref{normalplan} har planet normalvektorn $\Vec{n} = (2, 3, 1)$.
 
 \subsolution{c}
+För att beräkna avståndet mellan planet och punkten skulle vi kunna dra en linje som är rät mot planet till punkten och sedan mäta denna linje. Detta är dock lite svårt eftersom att vi inte vet vilken punkt på planet som 'ligger under' punkten. 
+
+Men vi känner till planets normalvektor så ett annat tillvägagångssätt är att flytta punkten en viss sträcka (parallellt med normalvektorn) så att den hamnar i planet, och sedan mäta hur stor denna sträcka var. Möjliga positioner för punkten beskrivs då av följande ekvation
+
+\[(x, y, z) = (2, 3, 13) + t \cdot (2, 3, 1) = (2 + 2t, 3 + 3t, 13 + t), t \in R\]
+
+Att hitta när denna linje skär planet kan göras med insättning i planets ekvation
+
+\begin{align*}
+2x+3y+z=19\\
+2(2 + 2t) + 3(3 + 3t) + (13+t) = 19\\
+4 + 4t + 9 + 9t + 13 + t = 19\\
+14t + 26 = 19\\
+t = -\frac{7}{14} = -\frac{1}{2}
+\end{align*}
+
+Så när $t=-\frac{1}{2}$ kommer punkten att ha flyttats till planet. Hur lång är då denna vektor som beskriver denna förflyttning? Vektorn är $-\frac{1}{2}\cdot (2, 3, 1) = \frac{1}{2}\cdot(-2, -3, -1)$ och den har längden
+
+$$\frac{1}{2}|(-2, -3, -1)| = \frac{1}{2}\sqrt{4+9+1} = \frac{1}{2}\sqrt{14} = \sqrt{\frac{1}{4}\cdot 14} = \sqrt{\frac{7}{2}}$$
+
+\textbf{Alternativ lösning med projektionsformeln}
+
+sökt: avstånden från punkten $q=(2,3,13)$ till planet $2x + 3y + z = 19$. Med avståndet menar vi alltid det kortaste avståndet. 
+
+Detta kan vi göra med hjälp av projektionsformeln!
+
+Vi vill projicera en vektor från planet $\Pi$ till punkten $q$ på normalvektorn $\Vec{n}=(2, 3, 1)$. 
+För att göra detta väljer vi en godtycklig punkt i planet $p=(x,y,z)$ där 
+$(x,y,z) \in \Pi$. Till exempel kan vi välja $p=(2,3,6)$ ty det uppfyller planets ekvation och således är $(2,3,6) \in \Pi$ . 
+
+Då skapar vi vår vektor $$\Vec{pq}=(2,3,13)-(2,3,6)=(0,0,7)$$
+
+och med det kan vi nu använda projektionsformeln 
+
+$$ proj_{\Vec{n}}(\Vec{pq})=\frac{\vec{n}\cdot\vec{pq}}{|\vec{n}|^2}\cdot\vec{n}$$
+
+och förenklar vi högerledet får vi
+
+\begin{align*}
+\frac{(2, 3, 1)\cdot(0,0,7)}{|(2, 3, 1)|^2}\cdot(2, 3, 1) = \\
+\\
+\frac{2 \cdot 0 + 3\cdot 0 + 1\cdot 7}{ \left( \sqrt{2^2+3^2+1^2} \right)^2}\cdot(2, 3, 1) = \\
+\\
+\frac{7}{\left( \sqrt{14} \right)^2}\cdot(2, 3, 1)=\frac{7}{14}\cdot(2, 3, 1)=\frac{1}{2}\cdot(2, 3, 1). 
+\end{align*}
+
+Då får vi att $proj_{\Vec{n}}(\Vec{pq})=\frac{1}{2}\cdot(2, 3, 1)$ och eftersom vi vill veta avståndet så beräknar vi absolutbeloppet 
+
+\begin{align*}
+|\frac{1}{2}\cdot(2, 3, 1)| = \\
+\sqrt{\left(\frac{1}{2}\right)^2\left( 2^2+3^2+1^2 \right)} = \\
+\sqrt{\frac{1}{4}\cdot 14}=\sqrt{\frac{2\cdot 7}{2\cdot2}}=\sqrt{\frac{7}{2}}. 
+\end{align*}
+
+\textbf{Svar:} Avståndet är $\sqrt{\frac{7}{2}}$.
 
 \end{solution}
 \end{document}

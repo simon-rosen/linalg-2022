@@ -1,0 +1,111 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{20}
+
+
+Ekvationssystemet är 
+\begin{align*}
+    \begin{cases} 
+     x+y+z=1  &(1)\\
+    x+2y+2z=0.  &(2) \\
+    \end{cases}
+\end{align*}
+
+Tar $(2) - (1)$ och får
+$$y+z = -1 \iff y = -z -1 \text{ (3)}$$
+
+Insättning av (3) i (1) ger
+
+\begin{align*}
+    x + (-z-1) + z = 1\\
+    x - z - 1 + z = 1\\
+    x = 2
+\end{align*}
+
+Detta ger
+
+\begin{align*}
+    \begin{cases} 
+     x&=2 \\
+     y+z&=-1. \\
+    \end{cases}
+\end{align*}
+
+Det finns alltså inte en entydig lösning. Men detta är inte heller så konstigt eftersom att skärningen mellan två plan är en linje. Vi skulle vilja ge svaret till den här uppgiften som denna linje på parameterform.
+
+Man kan parametrisera $z = t$ och får då
+
+\begin{align*}
+    \begin{cases} 
+     x&=2 \\
+     y&=-t-1. \\
+     z&=t
+    \end{cases}
+\end{align*}
+
+Med hjälp av denna kan vi enkelt skriva linjens ekvation på parameterform
+
+$$(x, y, z) = (2, -t-1, t) = (2, -1, 0) + t\cdot (0, -1, 1)$$
+
+
+\textbf{Alternativ lösning med gausseliminering}
+
+Ekvationssystemet är 
+\begin{align*}
+    \begin{cases} 
+     x+y+z=1  &(1)\\
+    x+2y+2z=0.  &(2) \\
+    \end{cases}
+\end{align*}
+
+Det kan representeras med totalmatrisen
+
+\[
+\begin{pmatrix}[ccc|c]
+  1 & 1 & 1 & 1\\
+  1 & 2 & 2 & 0
+\end{pmatrix} 
+\]
+
+Och lösas med Gauss-Jordans metod
+
+$$
+\begin{pmatrix}[ccc|c]
+  1 & 1 & 1 & 1\\
+  1 & 2 & 2 & 0
+\end{pmatrix} 
+\sim 
+\begin{pmatrix}[c]
+  r_1\\
+  r_2 - r_1
+\end{pmatrix}
+\sim 
+\begin{pmatrix}[ccc|c]
+  1 & 1 & 1 & 1\\
+  0 & 1 & 1 & -1
+\end{pmatrix} 
+\sim
+\begin{pmatrix}[c]
+  r_1-r_2\\
+  r_2
+\end{pmatrix}
+\sim
+\begin{pmatrix}[ccc|c]
+  1 & 0 & 0 & 2\\
+  0 & 1 & 1 & -1
+\end{pmatrix} 
+$$
+
+Vilket betyder att ekvationssystemet har lösningsmängden
+
+\begin{align*}
+    \begin{cases} 
+     x&=2\\
+     y+z&=-1\\
+    \end{cases}
+\end{align*}
+
+Detta beskriver en linje i $\Rn{3}$ som kan beskrivas på parameterform på samma sätt som ovan.
+
+\end{solution}
+\end{document}

@@ -1,0 +1,26 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{23}
+
+Vi kallar $(1, 1) = \vec{u}$. Knepet för att lösa den här uppgiften är att använda projektionen av $\vec{v}$ på $\vec{u}$, och sedan skriva $\vec{v}$ som en summa av denna projektion och en vektor som är vinkelrät mot denna. Det kan visualiseras såhär
+
+\begin{vectors2d}{0}{0}{5}{5}
+    \draw[line width=1pt,-stealth](0,0)--(2,5) node[anchor=south east]{$\vec{v}$};
+    \draw[line width=1pt,-stealth](0,0)--(1,1) node[anchor=north west]{$\vec{u}$};
+    \draw[line width=1pt,gray!40,-stealth](0,0)--(3.5,3.5) node[anchor=north west]{$\vec{proj_{\vec{u}}(\vec{v})}$};
+    \draw[line width=1pt,gray!40,-stealth](3.5,3.5)--(2,5) node[anchor=south west]{$\vec{v} - \vec{proj_{\vec{u}}(\vec{v})}$};
+\end{vectors2d}
+
+Vi beräknar projektionen (formel  \ref{projektionsformeln})
+
+$$proj_{\vec{u}}(\vec{v}) = \frac{\vec{u}\cdot\vec{v}}{|\vec{u}|^2}\cdot\vec{u} = \frac{2+5}{2}\cdot (1, 1) = \frac{7}{2}(1, 1) = (\frac{7}{2}, \frac{7}{2})$$
+
+Nu kan vi beräkna den vektor som är ortogonal genom att ta $\vec{v} - proj_{\vec{u}}(\vec{v})$
+
+$$\vec{v} - proj_{\vec{u}}(\vec{v}) = (2, 5) - (\frac{7}{2}, \frac{7}{2}) = (-\frac{3}{2}, \frac{3}{2})$$
+
+$\vec{v}$ kan alttså skrivas som
+$$\vec{v}=(2, 5) = (\frac{7}{2}, \frac{7}{2}) + (-\frac{3}{2}, \frac{3}{2})$$
+
+\end{solution}
+\end{document}

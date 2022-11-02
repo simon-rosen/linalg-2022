@@ -16,7 +16,7 @@ Sedan har vi villkoren att $\overline{x}$ är ortogonal mot $\overline{v} \textb
     \overline{x}\cdot\overline{u}=|\overline{x}|\cdot|\overline{u}|\cdot \cos{\frac{\pi}{2}} \\
 \end{align*}
 
-Vilka vi kan förenkla genom att använda oss av skalärprodukter och villkoret att $\frac{\pi}{2}=0$ till
+Vilka vi kan förenkla genom att använda oss av skalärprodukter och villkoret att $cos\frac{\pi}{2}=0$ till
 
 \begin{align*}
      (x,y,z)\cdot(2,-6,-3)=0  \\
@@ -92,11 +92,29 @@ vilket då ger oss ekvationssystemet
     \end{cases}
 \end{align*}
 
-Eftersom vi nu uttryck $x$ och $y$ i termer av $z$ kan vi sätta in dess i den sista ekvationen. 
-Detta ger oss att 
+Eftersom vi nu uttryck $x$ och $y$ i termer av $z$ kan vi sätta in dessa i ekvationen för $|\overline{x}|$, då förenklar vi vänsterledet genom att låta 
 
-$$\sqrt{x^2+y^2+z^2}=\sqrt{(\frac{z}{2})^2+(-\frac{z}{3})^2+z^2}=$$
+$$\sqrt{x^2+y^2+z^2}=\sqrt{\left( \frac{z}{2} \right)^2+\left(-\frac{z}{3}\right)^2+z^2}=\sqrt{z^2\left( \frac{1}{4}+\frac{1}{9}+1\right)}=\sqrt{z^2\left(\frac{49}{36} \right)}=\frac{7z}{6}.$$
 
+Detta kombinerat med högerledet ger oss att 
+
+$$\frac{7z}{6}=1$$ vilket är ekvivalent med att
+$$z=\frac{6}{7}.$$
+
+Då får vi att 
+
+\begin{align*}
+    \begin{cases} 
+     x=\frac{1}{2}\cdot\frac{6}{7}&=\frac{3}{7} \\
+    y=-\frac{1}{3}\cdot\frac{6}{7}&=-\frac{2}{7}.
+    \end{cases}
+\end{align*}
+
+vilket ger oss att $$\overline{x}=\frac{1}{7}(3,-2,6).$$ Nu kan vi välja den andra ortogonala vektorn till $$-\overline{x}=-\frac{1}{7}(3,-2,6)$$ och på så vis har vi hittat två ortogogonala enhetsvektorer till vektorerna $(2,-6,-3)$ och $(4,3,-1)$.
+
+\bigskip
+
+\textbf{Svar:} $\overline{x}=\pm \frac{1}{7}(3,-2,6)$.
 
 \bigskip
 \textbf{Alternativ lösning med kryssprodukt}

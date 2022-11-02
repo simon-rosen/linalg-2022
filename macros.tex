@@ -30,8 +30,6 @@
 % \draw[line width=1pt,blue,-stealth](2,3)--(1,-2) node[anchor=south west]{$\vec{u}$};
 
 
-
-
 %% inkludera alla lösningar i en mapp 
 \newcommand{\inkluderauppgifter}[2]{
 \foreach \i in {1, ..., #2} {
@@ -45,3 +43,15 @@
     }%
 }%
 }
+
+
+
+
+%% totalmatris
+% https://tex.stackexchange.com/questions/2233/whats-the-best-way-make-an-augmented-coefficient-matrix
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
