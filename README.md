@@ -3,7 +3,7 @@ Lösningar till rekommenderade uppgifter i kursen SF1624 - Algebra och geometri.
 
 # Till studenter
 ## Hur får man pdfen?
-Den senaste versionen av pdfen finns i filen `linalg_2022.pdf`
+[Länk till pdfen](https://github.com/simon-rosen/linalg-2022/blob/main/linalg_2022.pdf)
 
 
 # Till assar
