@@ -6,7 +6,77 @@ Sånna här uppgifter kommer vara mycket enklare att lösa senare i kursen när 
 
 \[t \cdot (-1, 0, 2) = (1, 2, 2) + s \cdot (-1, 2, 0) \text{ där } s, t \in R\]
 
-om man låter $t = 1, s = 2$ får man $(-1, 0, 2) = (1, 2, 2) + (-2, 4, 0) = (-1, 6, 2)$. Detta är ju sant för det första elementet i vektorerna men inte för element två och tre. Det går helt enkelt inte att uppfylla $VL = HL$ och en lösning saknas alltså, därför skär inte linjerna heller varandra.
+om man låter $t = 1, s = 2$ får man $(-1, 0, 2) = (1, 2, 2) + (-2, 4, 0) = (-1, 6, 2)$. Detta är ju sant för det första elementet i vektorerna men inte för element två och tre. Det går helt enkelt inte att uppfylla $VL = HL$ för några värden på $s$ och $t$ (man förstår nog detta enklast om man försöker göra så att $VL = HL$ en stund) så en lösning saknas, därför skär inte linjerna heller varandra.
+
+Den här lösningen känns inte så bra för bara för att man själv inte hittar något $s,t$ så att $HL=VL$ betyder ju inte att det inte finns. Lösningen nedan med gausseliminering gör åtminstonne mig mer säker på att det inte finns någon skärningspunkt.
+
+\textbf{Alternativ lösning med gausseliminering}
+
+En skärningspunkt mellan $L_1$ och $L_2$ inträffar när deras ekvationer är lika med varandra
+
+\begin{align*}
+    t(-1, 0, 2) = (1, 2, 2) + s(-1, 2, 0)\\
+    t(-1, 0, 2) - s(-1, 2, 0)= (1, 2, 2)\\
+    (-t, 0, 2t) + (s, -2s, 0)=(1, 2, 2)\\
+    (-t+s, -2s, 2t) = (1, 2, 2)
+\end{align*}
+
+Det här ger ett ekvationssystem med tre ekvationer
+
+\begin{align*}
+    \begin{cases} 
+        -t+s&=1  \\
+        -2s &= 2 \\
+        2t &= 2
+    \end{cases}
+\end{align*}
+
+Det här ekvationssystemet kan beskrivas med totalmatrisen, och sedan lösas med gausseliminering
+
+
+$$
+\begin{pmatrix}[cc|c]
+  -1 & 1 & 1\\
+  0 & -2 & 2\\
+  2 & 0 & 2\\
+\end{pmatrix} 
+\sim 
+\begin{pmatrix}[c]
+  r_1\\
+  -\frac{r_2}{2}\\
+  \frac{r_3}{2}\\
+\end{pmatrix}
+\sim 
+\begin{pmatrix}[cc|c]
+  -1 & 1 & 1\\
+  0 & 1 & -1\\
+  1 & 0 & 1\\
+\end{pmatrix} 
+\sim 
+\begin{pmatrix}[c]
+  r_3\\
+  r_2}\\
+  r_1 + r_3 - r_2\\
+\end{pmatrix}
+\sim 
+\begin{pmatrix}[cc|c]
+  1 & 0 & 1\\
+  0 & 1 & -1\\
+  0 & 0 & 3\\
+\end{pmatrix} 
+$$
+
+Den här resultatet av gausselimineringen betyder att
+
+\begin{align*}
+    \begin{cases} 
+        t&=1  \\
+        s = -1 \\
+        0 = 3 \textbf{ (Det här är omöjligt)}
+    \end{cases}
+\end{align*}
+
+Att vi har fått fram som en del av lösningen att $0 = 3$ betyder att ekvationssystemet saknar lösning, vilket i sin tur betyder att linjerna $L_1$ och $L_2$ inte skär varandra.
 
 \end{solution}
 \end{document}
