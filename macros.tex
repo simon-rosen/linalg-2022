@@ -1,6 +1,6 @@
 % för att enkelt formattera lösningar
 \newenvironment{solution}[1]
-    {{\Large\textbf{#1.}}\newline}
+    {\addcontentsline{toc}{subsubsection}{#1}{\Large\textbf{#1.}}\newline}
     {\newline}
 
 \newcommand{\subsolution}[1]{{\large\textbf{#1)}\newline}}
@@ -31,15 +31,14 @@
 
 
 %% inkludera alla lösningar i en mapp 
+%% uppgifter som saknas skrivs upp i table of contents med, fast som missing
 \newcommand{\inkluderauppgifter}[2]{
 \foreach \i in {1, ..., #2} {
     \edef\FileName{#1/\i}%
     \IfFileExists{\FileName}{%
        \subfile{\FileName}%
     }{%else
-        {\begin{solution}{{\color{red} \i}}%
-        {\color{red} lösning saknas}
-        \end{solution}}%
+        {\addcontentsline{toc}{subsubsection}{\color{red} \i - lösning saknas}}%
     }%
 }%
 }
