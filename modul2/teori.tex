@@ -1,4 +1,73 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
+Här används främst 3x3 matriser, för andra dimensioner fungerar det på samma sätt.
+
+%% gauss-jordans metod
+\subsubsection{Gauss-Jordans metod}
+\label{gaussjordan}
+Gauss-Jordans metod går ut på att man steg för steg gör om en matris tills den har formen
+$$
+\begin{pmatrix}[ccc|c]
+  1 & 0 & 0 & a\\
+  0 & 1 & 0 & b\\
+  0 & 0 & 1 & c
+\end{pmatrix} 
+$$
+
+Man kan tolka detta som lösningen till ett ekvationssystem: $x = a, y = b, z = c$.
+
+De elementära radoperationerna (som man får använda för att förändra matrisen) är:
+\begin{itemize}
+    \item Man får byta plats på rader i matrisen.
+    \item Man får multiplicera varje rad med en skalär.
+    \item Man får addera en rad till en annan (det är tilllåtet att addeda en rad $\cdot$ ett tal till en annan rad).
+\end{itemize}
+
+Om man skulle få en matris som ser ut typ såhär
+$$
+\begin{pmatrix}[ccc|c]
+  1 & 0 & 0 & a\\
+  0 & 1 & 0 & b\\
+  0 & 0 & 0 & 1
+\end{pmatrix} 
+$$
+är systemet \underline{inkonsistent} (olösbart), eftersom att det betyder att $0\cdot x + 0\cdot y + 0\cdot z = 1$ vilket är omöjligt.
+
+Om man skulle få typ
+$$
+\begin{pmatrix}[ccc|c]
+  1 & 0 & 0 & a\\
+  0 & 1 & 1 & b\\
+  0 & 0 & 0 & 0
+\end{pmatrix} 
+$$
+
+d.v.s att det finns så kallade \underline{fria variabler}, betyder det att det inte finns en unik lösning till systemet utan det kommer finnas oändligt många lösningar. I det här exemplet är lösningen en linje i $\Rn{3}$.
+
+\subsubsection{Homogena ekvationssystem}
+Ett \underline{Homogent ekvationssystem} är ett ekvationssystem där alla ekvationer har $HL = 0$. T.ex
+
+$$
+\begin{cases}
+x + y + z = 0\\
+x + 2y +2 z = 0
+\end{cases}
+$$
+
+Ett sådant system kan alltid lösas med den \underline{triviala lösningen} där man sätter $x = y = z = 0$.
+
+\subsubsection{Matriser}
+\begin{definition}
+\label{matrisrang}
+En matris \underline{rang} kan får genom att man räknar antalet ledande ettor i den matris man får genom gausseliminering.
+
+Exempelvis har vi
+$$A = \begin{pmatrix}
+1 & 0 & 1\\
+0 & 1 & 1\\
+0 & 0 & 0
+\end{pmatrix}$$
+rang(A) = 2
+\end{definition}
 
 \end{document}

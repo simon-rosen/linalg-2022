@@ -1,0 +1,59 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{13}
+
+Vi använder gausseliminering på matrisen $A$
+
+$$
+A = \begin{pmatrix}[cccc]
+1 & 2 & 3 & 4\\
+2 & 3 & 4 & 5\\
+1 & 1 & 1 & 2
+\end{pmatrix}
+\sim 
+\begin{pmatrix}[c]
+r_1\\
+r_2 - 2\cdot r_1\\
+r_3 - r_1
+\end{pmatrix}
+\sim 
+\begin{pmatrix}[cccc]
+1 & 2 & 3 & 4\\
+0 & -1 & -2 & -3\\
+0 & -1 & -2 & -2
+\end{pmatrix}
+\sim 
+\begin{pmatrix}[c]
+r_1 + 2\cdot r_2\\
+-1\cdot r_2\\
+r_3 - r_2
+\end{pmatrix}
+\sim
+$$
+% ny rad
+$$
+\begin{pmatrix}[cccc]
+1 & 0 & -1 & -2\\
+0 & 1 & 2 & 3\\
+0 & 0 & 0 & 1
+\end{pmatrix}
+\sim 
+\begin{pmatrix}[c]
+r_1 + 2\cdot r_3\\
+r_2 - 3\cdot r_3\\
+r_3
+\end{pmatrix}
+\sim
+\begin{pmatrix}[cccc]
+1 & 0 & -1 & 0\\
+0 & 1 & 2 & 0\\
+0 & 0 & 0 & 1
+\end{pmatrix}
+$$
+
+Det här är en matris på reducerad trappstegsform: Vi har bara ledande ettor, och de tal som är över/under ettorna är alla nollor. Man kan utföra gausselimineringen på olika sätt men man kommer alltid komma fram till den här matrisen, så den är unik. 
+
+Vi har tre stycken ledande ettor i matrisens radekvivalenta matris på trappstegsform, alltså är matrisens rang = 3. Se definition \ref{matrisrang}.
+
+\end{solution}
+\end{document}

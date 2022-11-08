@@ -1,0 +1,57 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{9}
+
+Ekvationssystemet
+
+$$
+\begin{cases}
+-x - y + z = 6\\
+2x + 2y + 4z = 6\\
+-x - y - z = 6
+\end{cases}
+$$
+
+Kan skrivas på matrisform, och sedan lösas med 'gaussning' (se sektion \ref{gaussjordan})
+
+$$
+\begin{pmatrix}[ccc|c]
+  -1 & -1 & 1 & 6\\
+  2 & 2 & 4 & 6\\
+  -1 & -1 & -1 & 6\\
+\end{pmatrix} 
+\sim 
+\begin{pmatrix}[c]
+  -1\cdot r_1\\
+  r_2 + 2\cdot r_1\\
+  r_3 - r_1\\
+\end{pmatrix}
+\sim
+\begin{pmatrix}[ccc|c]
+  1 & 1 & -1 & -6\\
+  0 & 0 & 2 & 18\\
+  0 & 0 & -2 & 0\\
+\end{pmatrix} 
+\sim 
+$$
+% ny rad
+Det går redan här att se att systemet är inkonsikvent eftersom att det säger att $2z = 18$ och att $-2z = 0$, vilket inte kan ske sammtidigt. Men jag fortsätter här för att vara extra tydlig
+$$
+\sim
+\begin{pmatrix}[c]
+  r_1\\
+  \frac{1}{2}\cdot r_2\\
+  r_3 + r_2\\
+\end{pmatrix}
+\sim
+\begin{pmatrix}[ccc|c]
+  1 & 1 & -1 & -6\\
+  0 & 0 & 1 & 9\\
+  0 & 0 & 0 & 18\\
+\end{pmatrix} 
+$$
+
+På sista raden har vi alltså bara 0:or till vänster, men totalmatrisen har ändå ett tal $\neq 0$ till höger, vilket betyder att systemet är inkonsistent.
+
+\end{solution}
+\end{document}

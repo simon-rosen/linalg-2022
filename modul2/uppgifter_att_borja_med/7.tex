@@ -1,0 +1,82 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{7}
+
+Ekvationssystemet
+
+$$
+\begin{cases}
+x + y + z = 1\\
+2x + 3y + 4z = 12\\
+-x + y + z = 7
+\end{cases}
+$$
+
+Kan skrivas på matrisform, och sedan lösas med 'gaussning' (se sektion \ref{gaussjordan})
+
+$$
+\begin{pmatrix}[ccc|c]
+  1 & 1 & 1 & 1\\
+  2 & 3 & 4 & 12\\
+  -1 & 1 & 1 & 7\\
+\end{pmatrix} 
+\sim 
+\begin{pmatrix}[c]
+  r_1\\
+  r_2 - 2\cdot r_1\\
+  r_3 + r_1\\
+\end{pmatrix}
+\sim 
+\begin{pmatrix}[ccc|c]
+  1 & 1 & 1 & 1\\
+  0 & 1 & 2 & 10\\
+  0 & 2 & 2 & 8\\
+\end{pmatrix} 
+\sim 
+\begin{pmatrix}[c]
+  r_1 - r_2\\
+  r_2\\
+  r_3 - 2\cdot r_2\\
+\end{pmatrix}
+\sim 
+$$
+% ny rad
+$$
+\begin{pmatrix}[ccc|c]
+  1 & 0 & -1 & -9\\
+  0 & 1 & 2 & 10\\
+  0 & 0 & -2 & -12\\
+\end{pmatrix} 
+\sim 
+\begin{pmatrix}[c]
+  r_1\\
+  r_2\\
+  -\frac{1}{2} \cdot r_3\\
+\end{pmatrix}
+\sim 
+\begin{pmatrix}[ccc|c]
+  1 & 0 & -1 & -9\\
+  0 & 1 & 2 & 10\\
+  0 & 0 & 1 & 6\\
+\end{pmatrix} 
+\sim 
+\begin{pmatrix}[c]
+  r_1 + r_3\\
+  r_2 - 2\cdot r_3\\
+  r_3\\
+\end{pmatrix}
+\sim 
+$$
+% ny rad
+$
+\begin{pmatrix}[ccc|c]
+  1 & 0 & 0 & -3\\
+  0 & 1 & 0 & -2\\
+  0 & 0 & 1 & 6\\
+\end{pmatrix} 
+$
+
+Detta betyder att en lösning till ekvationssystemet är $x = -3, y = -2, z = 6$. Notera att det finns exakt en lösning. En geometrisk tolkning av ekvationssystemet är som skärningspunkten mellan tre plan, och om en sådan finns är det en punkt.
+
+\end{solution}
+\end{document}
