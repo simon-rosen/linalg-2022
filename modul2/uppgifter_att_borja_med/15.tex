@@ -11,9 +11,99 @@ x + y + z + w = 0\\
 \end{cases}
 $$
 
-Kan lösas med gausseliminering (se sektion \ref{gaussjordan})
+Kan lösas med gausseliminering (se sektion \ref{gaussjordan}). Skriver först om ekvationssysyemet som en totalmatris (notera att det finns fyra variabler)
 
+$$
+\begin{pmatrix}[cccc|c]
+1 & 1 & 1 & 1 & 0\\
+2 & 3 & 0 & 4 & 1\\
+-1 & -2 & 1 & -3 & a\\
+\end{pmatrix}
+\sim 
+\begin{pmatrix}[c]
+r_1\\
+r_2 - 2\cdot r_1\\
+r_3 + r_1\\
+\end{pmatrix}
+\sim
+\begin{pmatrix}[cccc|c]
+1 & 1 & 1 & 1 & 0\\
+0 & 1 & -2 & 2 & 1\\
+0 & -1 & 2 & -2 & a\\
+\end{pmatrix}
+\sim
+\begin{pmatrix}[c]
+r_1\\
+r_2\\
+r_3 + r_2\\
+\end{pmatrix}
+$$
+%ny rad
+$
+\begin{pmatrix}[cccc|c]
+1 & 1 & 1 & 1 & 0\\
+0 & 1 & -2 & 2 & 1\\
+0 & 0 & 0 & 0 & a+1\\
+\end{pmatrix}
+$
 
+Kom ihåg att ekvationssystemet blir inkonsistent om vi får någon rad som ser ut som $\begin{pmatrix}[cccc|c]
+0 & 0 & 0 & 0 & 1
+\end{pmatrix}$, så för att undvika detta måste vi sätta $a = -1$. Några andra värden på a, som löser ekvationssystemet finns inte.
+
+Nu sätter vi in $a=-1$ och löser ekvationssystemet
+
+$$
+\begin{pmatrix}[cccc|c]
+1 & 1 & 1 & 1 & 0\\
+0 & 1 & -2 & 2 & 1\\
+0 & 0 & 0 & 0 & (-1)+1\\
+\end{pmatrix}
+\sim
+\begin{pmatrix}[cccc|c]
+1 & 1 & 1 & 1 & 0\\
+0 & 1 & -2 & 2 & 1\\
+0 & 0 & 0 & 0 & 0\\
+\end{pmatrix}
+\sim 
+\begin{pmatrix}[c]
+r_1 - r_2\\
+r_2\\
+r_3\\
+\end{pmatrix}
+\sim 
+\begin{pmatrix}[cccc|c]
+1 & 0 & 3 & -1 & -1\\
+0 & 1 & -2 & 2 & 1\\
+0 & 0 & 0 & 0 & 0\\
+\end{pmatrix}
+$$
+
+Vi ser på den reducerade matrisen att det finns oändligt många lösningar. Vi får parametrisera såhär
+
+$$
+\begin{cases}
+z = s\\
+w = t\\
+x + 3z - w = x + 3s - t = -1\\
+y -2z + 2w = y - 2s + 2t = 1\\
+\end{cases}
+\iff 
+\begin{cases}
+x =-3s + t -1\\
+y = 2s - 2t + 1\\
+z = s\\
+w = t\\
+\end{cases}
+$$
+
+Som kan skrivas på vektorform som 
+
+$$
+(x, y, z, w) = (-3s + t -1, 2s - 2t + 1, s, t) = (-1, 1, 0, 0) + s\cdot(-3, 2, 1, 0) + t\cdot(1, -2, 0, 1)
+$$
+
+Lösningen är alltså ett plan.
 
 \end{solution}
 \end{document}
