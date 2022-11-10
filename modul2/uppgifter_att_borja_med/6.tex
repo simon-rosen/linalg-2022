@@ -1,0 +1,95 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{6}
+
+\subsolution{a}
+Vi söker någon matris $A$ och någon vektor $\Vec{x}$ så att
+
+$$A\Vec{x}=a\cdot(1, 0, 2) + b\cdot(0, 2, -2) + c\cdot(3, -2, 3)$$
+
+Detta uppfylls om
+
+$$
+A = \begin{pmatrix}[ccc]
+1 & 0 & 3 \\
+0 & 2 & -2\\
+2 & -2 & 3\\
+\end{pmatrix}, \text{ och } \Vec{x} = 
+\begin{pmatrix}
+a\\b\\c
+\end{pmatrix}
+$$
+
+(Utför multiplikationen och kontrollera att  $A\Vec{x}=a\cdot(1, 0, 2) + b\cdot(0, 2, -2) + c\cdot(3, -2, 3)$ uppfylls om det inte känns självklart att vi valde dessa värden på $A$ och $\Vec{c}$)
+
+\subsolution{b}
+Jag skriver först om vektorekvationen lite för att vara övertydlig varför ekvationssystemet blir som det blir
+
+$$
+a\begin{pmatrix}
+1\\0\\2
+\end{pmatrix} + b \begin{pmatrix}
+0\\2\\-2
+\end{pmatrix} + c \begin{pmatrix}
+3\\-2\\3
+\end{pmatrix} = \begin{pmatrix}
+1\cdot a + 0\cdot b + 3\cdot c\\
+0\cdot a + 2\cdot b - 2\cdot c\\
+2\cdot a - 2\cdot b + 3\cdot c\\
+\end{pmatrix} = \begin{pmatrix}
+0\\0\\0
+\end{pmatrix}
+$$
+
+Ekvationssystemet blir alltså 
+$$\begin{cases}
+a + 3c = 0\\
+2b - 2c = 0\\
+2a - 2b + 3c = 0\\
+\end{cases}$$
+
+Nu skriver vi om det som en totalmatris och löser med gaussning (se sektion \ref{gaussjordan})
+
+$$
+\begin{pmatrix}[ccc|c]
+1 & 0 & 3 & 0\\
+0 & 2 & -2 & 0\\
+2 & -2 & 3 & 0\\
+\end{pmatrix}
+\sim 
+\begin{pmatrix}
+r_1\\
+\frac{1}{2}\cdot r_2\\
+r_3 - 2r_1\\
+\end{pmatrix}
+\sim
+\begin{pmatrix}[ccc|c]
+1 & 0 & 3 & 0\\
+0 & 1 & -1 & 0\\
+0 & -2 & -3 & 0\\
+\end{pmatrix}
+\sim
+\begin{pmatrix}
+r_1\\r_2\\r_3+2r_2
+\end{pmatrix}
+\sim
+$$
+$
+\begin{pmatrix}[ccc|c]
+1 & 0 & 3 & 0\\
+0 & 1 & -1 & 0\\
+0 & 0 & -5 & 0\\
+\end{pmatrix}
+$
+
+Man kan redan här se att vi kommer att komma fram till matrisen
+$$\begin{pmatrix}[ccc|c]
+1 & 0 & 0 & 0\\
+0 & 1 & 0 & 0\\
+0 & 0 & 1 & 0\\
+\end{pmatrix}$$
+
+Detta betyder att ekvationssystemet har lösningen $a = b = c = 0$, a.k.a. \underline{den triviala lösningen}.
+
+\end{solution}
+\end{document}

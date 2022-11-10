@@ -1,0 +1,40 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{10}
+
+Vi skriver om ekvationssystemet på matrisform och löser med gaussning (se sektion \ref{gaussjordan})
+
+$$
+\begin{pmatrix}[ccc|c]
+2 & 3 & 0 & 0\\
+2 & 3 & 4 & 5\\
+-4& -6 & -4 & -5
+\end{pmatrix}
+\sim 
+\begin{pmatrix}[ccc|c]
+1 & \frac{3}{2} & 0 & 0\\
+0 & 0 & 1 & \frac{5}{4}\\
+0 & 0 & 0 & 0
+\end{pmatrix}
+$$
+
+Det finns alltså \underline{oändligt många} lösningar till det här ekvationssystemet. Vilka är det?
+
+Parametriserar $y = t$ och får följande ekvationssystem som beskriver lösningarna
+
+\begin{cases}
+x = -\frac{3}{2}t\\
+y = t\\
+z = \frac{5}{4}
+\end{cases}
+
+Vilket kan skrivas på vektorform som
+
+$$
+\colvec{x\\y\\z} = \colvec{-\frac{3}{2}t\\t\\\frac{5}{4}} = \colvec{0\\0\\\frac{5}{4}} + t\cdot\colvec{-\frac{3}{2}\\1\\0}
+$$
+
+Lösningen är alltså en linje.
+
+\end{solution}
+\end{document}

@@ -1,0 +1,37 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{12}
+
+Vi skriver om ekvationssystemet på matrisform och löser med gaussning (se sektion \ref{gaussjordan}). Notera att ekvationssystemet är i fem variabler $x_1, x_2, x_3, x_4, x_5$.
+
+$$
+\begin{pmatrix}[ccccc|c]
+2 & 2 & 0 & 0 & 1 & 0\\
+2 & 1 & 4 & 0 & 0 & 2\\
+-4 & -6 & 0 & -4 & 0 & 0
+\end{pmatrix}
+\sim ... \sim
+\begin{pmatrix}[ccccc|c]
+1 & 0 & 0 & -2 & \frac{3}{2} & 0\\
+0 & 1 & 0 & 2 & -1 & 0\\
+0 & 0 & 1 & \frac{1}{2} & -\frac{1}{2} & \frac{1}{2}
+\end{pmatrix}
+$$
+
+Vi ser att den radreducerade matrisen på trappstegsform har två fria variabler som vi kan parametrisera $x_4 = s, x_5 = t$. Detta ger oss lösningen
+
+\begin{cases}
+x_1 = 2x_4 - \frac{3}{2}x_5 = 2s - \frac{3}{2}t\\
+x_2 = -2x_4 + x_5 = -2s + t\\
+x_3 = \frac{1}{2} - \frac{1}{2}x_4 + \frac{1}{2}x_5 = \frac{1}{2} - \frac{1}{2}s + \frac{1}{2}t
+\end{cases}
+
+Skriver detta på vektroform
+
+$$
+\colvec{x_1\\x_2\\x_3\\x_4\\x_5} = \colvec{2s-\frac{3}{2}t\\-2s+t\\\frac{1}{2} - \frac{1}{2}s + \frac{1}{2}t\\s\\t} 
+= \colvec{0\\0\\\frac{1}{2}\\0\\0} + s\colvec{2\\-2\\-\frac{1}{2}\\1\\0} + t\colvec{-\frac{3}{2}\\1\\\frac{1}{2}\\0\\1}, s,t \in \Rn{}
+$$
+
+\end{solution}
+\end{document}
