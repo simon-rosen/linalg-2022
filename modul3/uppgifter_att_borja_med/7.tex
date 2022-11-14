@@ -1,0 +1,43 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{7}
+
+Ekvationssystemet kan lösas med gaussning. Notera också att det är ett homogent ekvationssystem så vi vet att det minst kommer ha en lösning. Vi vet också att det har tre ekvationer och fyra variabler, så det kommer ha minst en fri variabel.
+
+$$
+\begin{pmatrix}[cccc|c]
+1&1&1&2&0\\
+2&4&4&2&0\\
+-1&1&1&-4&0
+\end{pmatrix}
+\sim ... \sim
+\begin{pmatrix}[cccc|c]
+1&	0&	0&	3&	0\\
+0&	1&	1&	-1&	0\\
+0&	0&	0&	0&	0
+\end{pmatrix}
+$$
+
+Vi parametriserar $z = s$ och $w=t$ och får lösningsmängden
+
+\begin{cases}
+x = -3t\\
+y = -s + t\\
+z= s\\
+w = t
+\end{cases}
+
+Detta är ett plan i $\Rn{4}$ och kan skrivas som
+
+$$
+\colvec{x\\y\\z\\w} = \colvec{0\\0\\0\\0} + s\colvec{0\\-1\\1\\0} + t\colvec{-3\\1\\0\\1}
+$$
+
+Eftersom att detta plan innehåller nollvektorn $\Vec{0}$ kan vi skriva det som spannet av de två riktningsvektorerna i denna linje
+
+$$span({(0, -1, 1, 0), (-3, 1, 0, 1)})$$
+
+Det är två vektorer som spänner upp lösningsmängden (som är ett plan) och därför har den dimension 2.
+
+\end{solution}
+\end{document}

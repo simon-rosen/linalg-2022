@@ -1,0 +1,36 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{1}
+
+\subsolution{a}
+
+Kom ihåg att vektorer är \underline{linjärt oberoende} om man inte kan skapa någon av dom genom en linjärkombination av de andra vektorerna. Om de skulle vara linjärt beroende skulle vi kunna uppfylla vektorekvationen
+
+$$s\Vec{u} + t\Vec{v} = \Vec{w} \iff s\colvec{1\\2\\3\\} + t\colvec{3\\2\\1} = \colvec{1\\0\\0}$$
+
+Låt oss testa detta med gaussning
+
+$$
+\begin{pmatrix}[cc|c]
+1 & 3 & 1\\
+2 & 2 & 0\\
+3 & 1 & 0\\
+\end{pmatrix}
+\sim ... \sim 
+\begin{pmatrix}[cc|c]
+1 & 3 &           1 \\
+0 & 1 & \frac{1}{2} \\
+0 & 0 &           1 \\
+\end{pmatrix}
+$$
+
+Det här systemet går alltså inte att lösa (det är inkonsistent), vilket betyder att vi inte kan skriva $\Vec{w}$ som en linjärkombination av $\Vec{u}$ och $\Vec{v}$, alltså är vektorerna linjärt oberoende.
+
+\subsolution{b}
+Nej, eftersom att de är linjärt oberoende kan vi inte skriva någon av dom som en linjärkombination av de andra.
+
+\subsolution{c}
+Ja, eftersom att de tre vektorerna är linjärt oberoende kommer de att spänna upp hela $\Rn{3}$. Och $\Rn{3}$ är ett delrum till $\Rn{3}$.
+
+\end{solution}
+\end{document}

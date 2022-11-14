@@ -1,0 +1,16 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{9}
+
+Nej, det är inte sant. Här är ett exempel
+
+\begin{vectors2d}{0}{0}{5}{5}
+\draw[line width=1pt,blue!60,-stealth](0,0)--(3,0) node[anchor=south west]{$\vec{v}$};
+\draw[line width=1pt,blue!60,-stealth](0,0)--(0,3) node[anchor=south west]{$\vec{u}$};
+\draw[line width=1pt,blue!60,-stealth](0,0)--(3,3) node[anchor=south west]{$\vec{w}=\vec{u} + \vec{v}$};
+\end{vectors2d}
+
+Det är uppenbart att de är linjärt beroende eftersom att $\vec{w} = \vec{u} + \vec{v}$, och man ser också att inte några av dom är parallella.
+
+\end{solution}
+\end{document}

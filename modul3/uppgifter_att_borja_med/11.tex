@@ -1,0 +1,95 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{11}
+
+\subsolution{a}
+
+$$
+\det\begin{pmatrix}[ccc]
+1&0&2\\
+2&1&1\\
+0&1&2
+\end{pmatrix} 
+=
+\begin{vmatrix}
+1&0&2\\
+2&1&1\\
+0&1&2
+\end{vmatrix}
+$$
+
+Jag väljer att kofaktorutveckla längs första raden
+
+$$
+\begin{vmatrix}
+1&0&2\\
+2&1&1\\
+0&1&2
+\end{vmatrix}
+= 1\cdot \begin{vmatrix}[cc]
+1& 1\\ 
+1&2
+\end{vmatrix}
+- 0\cdot \begin{vmatrix}
+2 & 1\\
+0&2
+\end{vmatrix}
++ 2\cdot \begin{vmatrix}
+2&1\\
+0&1
+\end{vmatrix}
+= 1(2-1) - 0(4-0) + 2(2 - 0) = 1 + 4 = 5
+$$
+
+\subsolution{b}
+Eftersom att $\det B \neq 0$ så vet vi att matrisen är inverterbar.
+
+\subsolution{c}
+Nej, det har ingen icke-trivial lösning. Anledningen är att $\det B = 0 \iff $ Ekvationssystemet har en unik lösning, och eftersom att vi vet att den triviala lösningen är en lösning så är det den enda lösningen som finns.
+
+\subsolution{d}
+Vi kan börja med att ta fram $B^T$ (B:s \underline{transponat})
+
+$$B^T = \begin{pmatrix}
+1&2&0\\
+0&1&1\\
+2&1&2
+\end{pmatrix}$$
+
+Man byter alltså så att kolumner blir rader och vice versa. Låt oss nu beräkna $\det B^T$
+
+$$
+\det B^T = \begin{vmatrix}
+1&2&0\\
+0&1&1\\
+2&1&2
+\end{vmatrix}
+$$
+
+Jag väljer nu att kofaktorutveckla längs den första kolumnen
+
+$$
+\det B^T = \begin{vmatrix}
+1&2&0\\
+0&1&1\\
+2&1&2
+\end{vmatrix}
+= 1\cdot \begin{vmatrix}[cc]
+1& 1\\ 
+1&2
+\end{vmatrix}
+- 0\cdot \begin{vmatrix}
+2 & 0\\
+1 & 2
+\end{vmatrix}
++ 2\cdot \begin{vmatrix}
+2&0\\
+1&1
+\end{vmatrix}
+= 1(2-1) - 0(4-0) + 2(2 - 0) = 1 + 4 = 5
+$$
+
+Alltså $\det B = \det B^T$. Det här gäller faktiskt allmänt.
+
+\end{solution}
+\end{document}
