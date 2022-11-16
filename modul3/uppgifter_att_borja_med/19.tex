@@ -1,0 +1,34 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{19}
+
+Man skulle kunna beräkna matrisen som ges av $B^{-1}AB$ och sedan ta determinanten av denna. Men vi kan använda några räkneregler för determinanter som gör denna uppgift mycket enklare (se föreläsning 6)
+
+$$
+\begin{cases}
+\det AB = \det A \cdot \det B\\
+\det A^{-1} = \frac{1}{\det A} 
+\end{cases}
+$$
+
+Notera att för att kunna använda den andra regeln så måste $A$ vara en inverterbar matris. Men här kan vi anta att $B$ är inverterbar för annars skulle det inte gå att beräkna $\det B^{-1}AB$. Låt oss utveckla uttrycket med hjälp av räknereglerna
+
+$$
+\det B^{-1}AB = \det B^{-1} \cdot \det A \cdot \det B = \frac{1}{\det B} \cdot \det A \cdot \det B = \det A
+$$
+
+$\det B^{-1}$ och $\det B$ tog alltså ut varandra. Nu räcker det alltså att beräkna $\det A$
+
+$$
+\det B^{-1}AB = \det A = 
+\begin{vmatrix}
+1 & 2\\
+2 & 6
+\end{vmatrix} =
+1\cdot6 - 2\cdot2 = 6-4 = 2
+$$
+
+\svar{$\det B^{-1}AB = 2$}
+
+\end{solution}
+\end{document}

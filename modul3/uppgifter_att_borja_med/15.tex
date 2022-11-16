@@ -1,0 +1,80 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{15}
+
+Vi kan lösa ekvationssystemet med gaussning
+
+$$
+\begin{pmatrix}[cccc|c]
+1&1&1&1&0\\
+2&3&0&4&0\\
+-1&-2&1&a&0
+\end{pmatrix}
+\sim 
+\begin{pmatrix}
+r_1\\r_2 - 2r_1\\r_3 + r_1
+\end{pmatrix}
+\sim
+\begin{pmatrix}[cccc|c]
+1&1&1&1&0\\
+0&1&-2&2&0\\
+0&-1&2&(a+1)&0
+\end{pmatrix}
+\sim 
+\begin{pmatrix}
+r_1\\r_2\\r_3 + r_2
+\end{pmatrix}
+\sim
+$$
+% ny rad
+$
+\begin{pmatrix}[cccc|c]
+1&1&1&1&0\\
+0&1&-2&2&0\\
+0&0&0&(a+3)&0
+\end{pmatrix}
+$
+
+Om lösningsrummet ska bli 2-dimensionellt, dvs om lösningsmängden till systemet ska bilda ett plan, vill vi ha två fria variabler i ekvationssystemet. Alltså ska vi sätta $a = -3$.
+
+Fortsätter gaussningen med detta värde på $a$.
+
+$$
+\begin{pmatrix}[cccc|c]
+1&1&1&1&0\\
+0&1&-2&2&0\\
+0&0&0&(-3+3)&0
+\end{pmatrix}
+\sim 
+\begin{pmatrix}
+r_1 - r_2\\
+r_2\\
+r_3
+\end{pmatrix}
+\sim 
+\begin{pmatrix}[cccc|c]
+1&0&3&-1&0\\
+0&1&-2&2&0\\
+0&0&0&0&0
+\end{pmatrix}
+$$
+
+Vi parametriserar $z = s$ och $w = t$, där $s, t \in R$, och får att lösningen till ekvationssystemet är
+
+$$
+\begin{cases}
+x = -3s + t\\
+y = 2s - 2t\\
+z=s\\
+w=t
+\end{cases}
+$$
+
+Lösningsrummet kan beskrivas av spannet
+
+$$span({\colvec{-3\\2\\1\\0}, \colvec{1\\-2\\0\\1})$$
+
+Notera att detta är de riktningsvektorer som skulle angivits om vi hade beskrivit lösningen som ett plan på parameterform. Man säger att de vektorer som spänner upp det här vektorrummet \underline{utgör en bas} för det (på samma sätt som x- och y-axeln utgör en bas för xy-planet som ni är vana vid).
+
+\end{solution}
+\end{document}
