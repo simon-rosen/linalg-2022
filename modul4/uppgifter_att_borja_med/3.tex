@@ -1,0 +1,29 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{3}
+
+Vi vet att den linjära avbildningen går från $\Rn{2}$ till $\Rn{2}$ så dess matris är en $2\times2$ matris. Denna matris $A$ ska uppfylla 
+
+\begin{cases}
+A\colvec{1\\0} = \colvec{2\\5}\\\\
+A\colvec{0\\1} = \colvec{3\\9}
+\end{cases}
+
+Alltså är den första kolumnen i $A$  $\colvec{2\\5}$ och den andra $\colvec{3\\9}$. Detta ger att
+
+$$A = \begin{pmatrix}
+2 & 3\\
+5 & 9
+\end{pmatrix}$$
+
+Så 
+
+$$T(\colvec{3\\2}) = 
+\begin{pmatrix}
+2 & 3\\
+5 & 9
+\end{pmatrix}\colvec{3\\2}
+=\colvec{6+6\\15+18} = \colvec{12\\33}$$
+
+\end{solution}
+\end{document}
