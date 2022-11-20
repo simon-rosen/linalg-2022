@@ -4,7 +4,7 @@
 \begin{formel}{(kryssprodukt)}
 \label{kryssprod} 
 Kryssprodukten av två vektorer $\vec{u} = (u_1, u_2, u_3)$ och $\vec{v} = (v_1, v_2, v_3)$ är
-\[\vec{u}\times \vec{v} = (u_2\cdot v_3 - u_3\cdot v_2, u_3\cdot v_1 - u_1\cdot v_3, u_1\cdot v_2 - u_2\cdot v_1)\]
+\[\vec{u}\times \vec{v} = \colvec{u_2\cdot v_3 - u_3\cdot v_2\\u_3\cdot v_1 - u_1\cdot v_3\\u_1\cdot v_2 - u_2\cdot v_1}\]
 
 En viktig egenskap kryssprodukten $\vec{u}\times\vec{v}$ är att den \underline{är en vektor} som är ortogonal mot båda vektorerna $\vec{u}$ och $\vec{v}$.
 \end{formel}
@@ -19,9 +19,9 @@ Där $\alpha$ är vinkeln mellan $\vec{u}$ och $\vec{v}$.
 \end{formel}
 
 % delrum
-\subsubsection{Vektorrum och delrum}
+\subsubsection{Linjära höljen och delrum}
 \label{vektorrum}
-Ett rum ska uppfylla följande krav
+Ett linjärt hölje ska uppfylla följande krav
 \begin{itemize}
     \item Det ska vara slutet under
     \begin{itemize}
@@ -31,8 +31,8 @@ Ett rum ska uppfylla följande krav
     \item Det måste innehålla nollvektorn $\vec{0}$.
 \end{itemize}
 
-Ett delrum är lite som en delmängd till ett annat rum. Det måste uppfylla samma krav som rummet det är ett delrum till, men det kan ha lägre dimension. 
+Ett delrum är lite som en delmängd till ett linjärt höjle. Det måste uppfylla samma krav som det linjära höljet det är ett delrum till, men det kan ha lägre dimension. 
 
-Exempel: $\Rn{2}$ är ett delrum till $\Rn{3}$. Ett till exempel (specialfall): $\Rn{3}$ är ett delrum till $\Rn{3}$.
+Exempel: $\Rn{2}$ är ett delrum till $\Rn{3}$. Ett till exempel (specialfall): $\Rn{3}$ är ett delrum till $\Rn{3}$. Ett annat viktigt speciallfall är $\{\vec{0}\}$ som är delrum till alla $\Rn{n}$.
 
 \end{document}
