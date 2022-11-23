@@ -1,0 +1,23 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{5} 
+Vi vet att en linjär avbildning tar en vektor och ger tillbaka en ny vektor. En linje kan ses som en mängd av punkter (och beskrivs av linjens parameterform som ortsvektorer till dessa punkter).
+
+För att göra det lättare att förstå vad som händer skriver jag om linjen som
+$$
+\colvec{x\\y} =\colvec{1\\-1} + t\colvec{3\\1}=\colvec{1+3t\\-1+t}, t\in R
+$$
+
+Nu kan vi lätt ta fram den linjära avbildningen av alla linjens punkter direkt
+
+$$
+\begin{pmatrix}
+1&2\\
+3&4
+\end{pmatrix} \colvec{1+3t\\-1+t} = \colvec{1(1+3t) + 2(-1+t)\\3(1+3t) + 4(-1+t)} = \colvec{-1+5t\\-1+13t} = \colvec{-1\\-1} + t\colvec{5\\13}
+$$
+
+Den här omskrivningen som jag gjorde är faktiskt inte nödvändig. Man hade lika gärna kunnat projicera linjens startpunkt $(1, -1)$ och dens riktningsvektor $(3,1)$ för sig.
+
+\end{solution}
+\end{document}

@@ -1,0 +1,23 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{9}
+
+När vektorer $\Vec{u} = (u_1, u_2, u_3)$ projiceras på $x_1x_2$-planet kommer det resultera i vektorer på formen = $(u_1, u_2, 0)$. Alltså kommer dessa vektorer ha $x_3=0$, medans $u_1$ och $u_2$ är oförändrade. Den avbildningsmatris som åstadkommer detta är
+
+$$\begin{pmatrix}
+1&0&0\\0&1&0\\0&0&0
+\end{pmatrix}$$
+
+Vi testar med en vektor $\Vec{v} = (1, 1, 1) \in \Rn{3}$. Projektionen av denna vektor på $x_1x_2$-planet borde vara vektorn $(1, 1, 0)$
+
+$$
+\begin{pmatrix}
+1&0&0\\0&1&0\\0&0&0
+\end{pmatrix} \colvec{1\\1\\1\\} =
+\colvec{1+0+0\\0+1+0\\0+0+0} = \colvec{1\\1\\0}
+$$
+
+I den här uppgiften kan man se vad avbildningsmatrisen ska vara utan att göra några avancerade beräkningar.
+
+\end{solution}
+\end{document}

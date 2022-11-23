@@ -1,0 +1,29 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{7}
+
+Vi vill ha en linjär avbildning som speglar alla vektorer $\vec{v} \in \Rn{2}$ i x-axeln. 
+
+\begin{vectors2d}{-3}{-3}{3}{3}
+    \draw[line width=1pt,-stealth](0,0)--(2,2) node[anchor=south east]{$\vec{v}$};
+    \draw[line width=1pt,gray!60,-stealth](0,0)--(2,-2) node[anchor=north west]{speglad $\vec{v}$};
+\end{vectors2d}
+
+Alltså söker vi en avbildningsmatris som gör så att vektorer behåller samma x-värde men multiplicerar sitt y-värde med $-1$. Denna matris är
+$$
+\begin{pmatrix}
+1&0\\0&-1
+\end{pmatrix}
+$$
+
+Vi kan testa att multiplicera $\vec{v} = \colvec{1\\1}$ och se om vi får fram $\colvec{1\\-1}$ efter matrismultiplikationen
+
+$$
+\begin{pmatrix}
+1&0\\0&-1
+\end{pmatrix} \colvec{1\\1} = \colvec{1+0\\0+(-1)} = \colvec{1\\-1}
+$$
+
+I den här uppgiften kan man se vad avbildningsmatrisen ska vara utan att göra några beräkningar. 
+\end{solution}
+\end{document}

@@ -1,0 +1,33 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{10}
+
+En vektor $\vec{v}$ kan skrivas som summan av dess projektion på planets normalvektor $proj_{\vec{n}}(\vec{v})$ plus en vektor som är ortogonal mot denna projektion $\vec{v} - proj_{\vec{n}}(\vec{v})$ (alltså en vektor i planet). 
+
+$$
+\vec{v} = \underbrace{proj_{\vec{n}}(\vec{v})}_{\text{projektion på normalvektor}} + \underbrace{(\vec{v} - proj_{\vec{n}}(\vec{v}))}_{\text{projektion på plan}}
+$$
+
+Projektionen på ett plan kan alltså beräknas med hjälp av formeln $\vec{v} - proj_{\vec{n}}(\vec{v})$. Detta kan vi använda för att ta fram avbildningsmatrisen som projicerar alla vektorer i $\Rn{3}$ på planet $2x_1 + 2x_2 + x_3 = 0$. Detta plan har normalvektorn $\vec{n} = (2, 2, 1)$
+
+Vi projicerar en godtycklig vektor $\vec{u} = (x_1, x_2, x_3)$ på planet
+
+$$
+proj_{planet}(\vec{u}) = \vec{u} - proj_{\vec{n}}(\vec{u}) = \colvec{x_1\\x_2\\x_3} - \frac{\colvec{2\\2\\1}\cdot \colvec{x_1\\x_2\\x_3}}{|\colvec{2\\2\\1}|^2} \cdot \colvec{2\\2\\1} =
+$$
+%ny rad
+$$
+= \colvec{x_1\\x_2\\x_3} - \underbrace{\frac{2x_1 + 2x_2 + x_3}{\sqrt{2^2 + 2^2 + 1^2}^2}}_{\frac{2x_1 + 2x_2 + x_3}{9}}\cdot \colvec{2\\2\\1} = \colvec{x_1\\x_2\\x_3} - \colvec{\frac{4x_1 + 4x_2 + 2x_3}{9}\\\frac{4x_1 + 4x_2 + 2x_3}{9}\\\frac{2x_1 + 2x_2 + x_3}{9}} = \colvec{x_1 - \frac{4x_1 + 4x_2 + 2x_3}{9}\\ x_2 - \frac{4x_1 + 4x_2 + 2x_3}{9}\\x_3 - \frac{2x_1 + 2x_2 + x_3}{9}} = 
+$$
+% ny rad
+$$
+= \colvec{\frac{9x_1}{9} - \frac{4x_1 + 4x_2 + 2x_3}{9}\\ \frac{9x_2}{9} - \frac{4x_1 + 4x_2 + 2x_3}{9}\\\frac{9x_3}{9} - \frac{2x_1 + 2x_2 + x_3}{9}} = \colvec{\frac{5x_1 - 4x_2 - 2x_3}{9}\\ \frac{-4x_1 + 5x_2 - 2x_3}{9}\\ \frac{-2x_1 - 2x_2 + 8x_3}{9}} = \underbrace{\frac{1}{9}\begin{pmatrix}
+5&-4&-2\\
+-4&5&-2\\
+-2&-2&8
+\end{pmatrix}}_{\text{avbildningsmatris}} \colvec{x_1\\x_2\\x_3}
+$$
+
+
+\end{solution}
+\end{document}
