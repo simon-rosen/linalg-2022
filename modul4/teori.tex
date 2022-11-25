@@ -1,16 +1,40 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 \subsection{Linjära avbildningar}
-Linjära avbildningar är egentligen bara matrismultiplikation mellan en matris $A$ (som kallas \underline{avbildningsmatris}) och en vektor $\Vec{u}$. En sådan multiplikation kommer ge tillbaka en ny vektor $\Vec{v}$. Vi säger att vektorn \underline{avbildas} på en annan vektor.
+Ni är ju vana med begreppet funktion. Man kan till exempel tala om en funktion $f(x) = kx + m$. Man skulle kunna lägga till i den här funktionsdefinitionen att $f:\Rn{} \rightarrow \Rn{}$, dvs att $f$ är en funktion som accepterar värden från de reella talen och ger tillbaka värden från de reella talen.
+
+Linjära avbildningar är också funktioner $T: \Rn{m} \rightarrow \Rn{n}$, men de kan gå mellan olika (eller samma) dimensioner. Den tar alltså en vektor i $\Rn{m}$ och ger tillbaka en vektor i $\Rn{n}$. I praktiken är linjära avbildningar är egentligen bara matrismultiplikation mellan en matris $A$ (som kallas \underline{avbildningsmatris}) och en vektor $\Vec{u}$. En sådan multiplikation kommer ge tillbaka en ny vektor $\Vec{v}$. Vi säger att vektorn \underline{avbildas} på en annan vektor.
 
 $$A\Vec{u} = \Vec{v}$$
 
-$\Vec{u}$ och $\Vec{v}$ behöver inte nödvändigtvis vara lika stora, en avbildning kan alltså gå från en dimension till en annan. Ett exempel på detta är kameror: De tar något som händer i vår värld (3D) och gör om det till ett fotografi (2D).
+Ett exempel på en linjär avbildning $T: \Rn{3} \rightarrow \Rn{2}$: De tar något som händer i vår värld (3D) och gör om det till ett fotografi (2D).
 
-\subsection{Bildrum / Kolonnrum (col)}
+\subsection{Linjäritet}
+Att en linjär avbildning är \underline{linjär} betyder att den inte innehåller termer som inte är linjära. Jämför med funktioner i en variabel: $f(x) = x^2$ är inte linjär medans $g(x) = 3x +1$ är det. Att $T: \Rn{m} \rightarrow \Rn{n}$ är linjär medför att den har följande räkneregler
+\begin{itemize}
+    \item $T(\Vec{u} + \Vec{v}) = T(\Vec{u}) + T(\Vec{v})$
+    \item $T(k\cdot \Vec{u}) = k\cdot T(\Vec{v})$
+\end{itemize}
 
+\subsection{Bildrum (im)/ Värderum / Kolonnrum (col)}
+I envarren talade ni om begreppen definitionsmängd och värdemängd för en funktion. Bildrummet är lite som värdemängden för en linjär avbildning.
 
-\subsection{Nollrum / Kärna (kernel)}
+Bildrummet är alla vektorer som den linjära avbildningen \underline{avbildar} på. Kom ihåg att en linjär tar vektorer (indata) och producerar nya vektorer (utdata). Alla dessa nya vektorer bildar bildrummet till den linjära avbildningen.
 
+I praktiken blir bildrummet spannet av de linjärt oberoende kolonnerna i matrisen (det kallas därför även för kolonnrum).
+
+\subsection{Nollrum / Kärna (ker)}
+Nollrummet är alla de vektorer som avbildas på nollvektorn $\Vec{0}$ av den linjära avbildningen. 
+
+Det är alltså lite som nollställen för funktioner i en variabel.
+
+I praktiken tar man fram nollrummet genom att parametrisera lösningsmängden till ekvationen $A\Vec{x}=\vec{0}$
+
+\begin{formel}{Dimensionssatsen}
+
+För en linjär avbildning $T: \Rn{m} \rightarrow \Rn{n}$ gäller att summan av dimensionerna för dess bildrum och nollrum är lika med dimensionen vektorerna som den tar som indata.
+
+$$dim(im(T)) + dim(ker(T)) = m$$
+\end{formel}
 
 \end{document}

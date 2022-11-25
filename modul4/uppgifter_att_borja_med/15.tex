@@ -1,0 +1,36 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{15}
+
+$(1, -1, -2)$ ligger i bildrummet till den linjära avbildningen om vi kan lösa ekvationssystemet med totalmatrisen
+
+$$
+\begin{pmatrix}[ccc|c]
+2&1&0&1\\
+-1&2&1&-1\\
+3&-1&-1&-2
+\end{pmatrix}
+$$
+
+Vi testar med gaussning
+
+$$
+\begin{pmatrix}[ccc|c]
+2&1&0&1\\
+-1&2&1&-1\\
+3&-1&-1&-2
+\end{pmatrix}
+\skipgauss
+\begin{pmatrix}[ccc|c]
+-1&2&1&-1\\
+0&5&2&-1\\
+0&5&2&-5
+\end{pmatrix}
+$$
+
+Vi ser att det här systemet är inkonsistent, så $(1, -1, -2)$ ligger inte i bildrummet till den linjära avbildningen (det finns inget sätt att skriva kolonnerna i matrisen så att vi får vektorn $(1, -1, -2)$.
+
+\svar{Nej}
+
+\end{solution}
+\end{document}

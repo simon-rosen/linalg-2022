@@ -1,0 +1,44 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{13}
+
+Vi reducerar matrisen med gaussning
+
+$$
+A = \begin{pmatrix}
+1&2&3&0\\
+5&2&0&1\\
+1&1&2&1
+\end{pmatrix}
+\skipgauss
+\begin{pmatrix}
+1&0&0&1\\
+0&1&0&-2\\
+0&0&1&1
+\end{pmatrix}
+$$
+
+Detta betyder att de första kolonnerna är linjärt oberoende och att de utgör bildrummet till den linjära avbildningen som ges av matrisen $A$. Alltså
+
+$$span(\{ \colvec{1\\5\\1}, \colvec{2\\2\\1}, \colvec{3\\0\\2} \})$$
+
+Nollrummet tas fram genom att vi parametriserar lösningsmängden till 
+
+$$A\Vec{x} = \colvec{0\\0\\0}$$
+
+I den sista kolonnen har vi en fri variabel, lösningsmängden till den här ekvationen, alltså nollrummet till vår linjära avbildning, blir alltså 
+
+$$span(\{\colvec{-1\\2\\-1\\1}\})$$ 
+
+
+Jag såg på matrisen att det här är svaret, men om man inte tycker att det är uppenbart än kan börja med att parametrisera lösningsmängden (repetera uppgifterna från modul 3 om det är svårt)
+
+\begin{cases}
+x + w = 0\\
+y - 2w = 0\\
+z + w = 0\\
+w = t
+\end{cases}
+
+\end{solution}
+\end{document}
