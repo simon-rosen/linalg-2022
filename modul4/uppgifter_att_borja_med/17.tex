@@ -1,0 +1,76 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{17} % ändra till rätt uppgiftsnummer
+
+    Vi börjar med gaussning på matrisen.
+
+    $$
+        \begin{pmatrix}[ccc|c]
+            1  & 1 & 0 & 1 \\
+            1  & 0 & 1 & 2 \\
+            -1 & 1 & 1 & 0
+        \end{pmatrix}
+        \skipgauss
+        \begin{pmatrix}[ccc|c]
+            1 & 0 & 0 & 1 \\
+            0 & 1 & 0 & 0 \\
+            0 & 0 & 1 & 1
+        \end{pmatrix}
+    $$
+
+
+    De två första kolonnerna är linjärt oberoende och utgör alltså bildrummet. Alltså är bildrummet
+
+    $$
+        span({\begin{pmatrix}[c]
+                    1  \\
+                    1  \\
+                    -1 \\
+                \end{pmatrix}
+                \begin{pmatrix}[c]
+                    1 \\
+                    0 \\
+                    1 \\
+                \end{pmatrix}
+                \begin{pmatrix}[c]
+                    0 \\
+                    1 \\
+                    1 \\
+                \end{pmatrix}
+            })
+    $$
+
+    För att bestämma nollrummet parametriserar vi lösningsmängden skriver vi på formen $Ax = 0$.
+
+    $$
+        \begin{pmatrix}[ccc|c]
+            1 & 0 & 0 & 1 \\
+            0 & 1 & 0 & 0 \\
+            0 & 0 & 1 & 1
+        \end{pmatrix}
+        \begin{pmatrix}[c]
+            x_1 \\
+            x_2 \\
+            x_3
+        \end{pmatrix}
+        =
+        \begin{pmatrix}[c]
+            1 \\
+            0 \\
+            1
+        \end{pmatrix}
+    $$
+
+    Nollrummet till matrisen är alltså $span({\begin{pmatrix}[c]
+                    -1 \\
+                    0  \\
+                    -1 \\
+                    1
+                \end{pmatrix}})$.
+
+
+
+
+
+\end{solution}
+\end{document}
