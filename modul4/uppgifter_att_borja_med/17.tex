@@ -5,13 +5,13 @@
     Vi börjar med gaussning på matrisen.
 
     $$
-        \begin{pmatrix}[ccc|c]
+        \begin{pmatrix}[cccc]
             1  & 1 & 0 & 1 \\
             1  & 0 & 1 & 2 \\
             -1 & 1 & 1 & 0
         \end{pmatrix}
         \skipgauss
-        \begin{pmatrix}[ccc|c]
+        \begin{pmatrix}[cccc]
             1 & 0 & 0 & 1 \\
             0 & 1 & 0 & 0 \\
             0 & 0 & 1 & 1
@@ -19,7 +19,7 @@
     $$
 
 
-    De två första kolonnerna är linjärt oberoende och utgör alltså bildrummet. Alltså är bildrummet
+    De tre första kolonnerna är linjärt oberoende och utgör alltså bildrummet. Alltså är bildrummet
 
     $$
         span({\begin{pmatrix}[c]
@@ -40,10 +40,10 @@
             })
     $$
 
-    För att bestämma nollrummet parametriserar vi lösningsmängden skriver vi på formen $Ax = 0$.
+    För att bestämma nollrummet parametriserar vi lösningsmängden skriver vi på formen $Ax = \vec{0}$.
 
     $$
-        \begin{pmatrix}[ccc|c]
+        \begin{pmatrix}[cccc]
             1 & 0 & 0 & 1 \\
             0 & 1 & 0 & 0 \\
             0 & 0 & 1 & 1
