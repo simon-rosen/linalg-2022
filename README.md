@@ -11,5 +11,10 @@ Lägg till lösningar under `modulX/uppgifter_att_borja_med/Y.tex` det finns mal
 
 Referera gärna till formler som används i lösningen med `\ref{formalnamn}`. Nya formler för en modul kan läggas till i `modulX/teori.tex`.
 
+## Handskrivna lösningar
+Man kan lägga till handskrivna lösningar om man skannar in dom som en pdf och sedan lägger dom i `modulX/uppgifter_att_borja_med/inskannat/uppgiftnummer.pdf`.
+
+OBS: pdf:en måste heta `<uppgiftnummer>.pdf`. Exempel: uppgift 1 ska heta `1.pdf`.
+
 ## Macros för att skriva mindre latex kod
 De har jag lagt i `macros.tex`. T.ex finns det ett kommando för att skapa lösningar till deluppgifter, alltså att skriva typ **a)**, som används såhär `\subsolution{deluppgift}`.
