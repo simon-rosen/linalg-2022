@@ -40,13 +40,16 @@
     \edef\FileName{#1/\i}%
     \IfFileExists{\FileName}{%
        \subfile{\FileName}%
-    }{%else
+    }{%else - lägg till inskannad lösning om det finns
+        \IfFileExists{#1/inskannat/\i.pdf}{%
+        {\addcontentsline{toc}{subsubsection}{\color{} \i - (inskannad lösning)}}%
+        \includepdf[pages=-]{#1/inskannat/\i.pdf}
+        }{%else - lösning saknas helt
         {\addcontentsline{toc}{subsubsection}{\color{red} \i - lösning saknas}}%
+        }
     }%
 }%
 }
-
-
 
 
 %% totalmatris
@@ -63,11 +66,8 @@
 \newcommand{\colvec}[1]{\begin{pmatrix}#1\end{pmatrix}}
 
 
-
 %% skriva svar
 \newcommand{\svar}[1]{\underline{\textbf{svar: }}#1}
-
-
 
 
 %% skippa del av gaussning
