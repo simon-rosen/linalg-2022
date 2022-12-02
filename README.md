@@ -16,5 +16,7 @@ Man kan lägga till handskrivna lösningar om man skannar in dom som en pdf och 
 
 OBS: pdf:en måste heta `<uppgiftnummer>.pdf`. Exempel: uppgift 1 ska heta `1.pdf`.
 
+Om det finns både en latex-lösning och en handskriven lösning kommer latex-lösningen att prioriteras. Latex-lösningar är även att föredra eftersom att de är snyggare och lättare att modifiera, men det går snabbare att skriva lösningar för hand.
+
 ## Macros för att skriva mindre latex kod
 De har jag lagt i `macros.tex`. T.ex finns det ett kommando för att skapa lösningar till deluppgifter, alltså att skriva typ **a)**, som används såhär `\subsolution{deluppgift}`.
