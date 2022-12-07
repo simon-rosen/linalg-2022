@@ -1,0 +1,52 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{4}
+
+\subsolution{a}
+
+Vi börjar med att bestämma egenvärden till $A$.
+
+$$
+\begin{vmatrix}
+    1 - \lambda & 1\\
+    0 & 1 - \lambda
+\end{vmatrix} = 0 \iff
+(1-\lambda)^2 = 0
+$$
+
+Man ser direkt att lösningarna till den karaktäriska ekvationen är $\lambda = 1$. Vi har alltså bara ett egenvärde till $A$ (och det egenvärdet har algebraisk multiplicitet 2 eftersom att det är en dubbelrot).
+
+Nu använder vi detta egenvärde för att bestämma egenvektorer till $A$
+
+$$
+\begin{pmatrix}
+    1 - 1 & 1\\
+    0 & 1 - 1\\
+\end{pmatrix}\Vec{v} = 
+\begin{pmatrix}
+    0 & 1\\
+    0 & 0\\
+\end{pmatrix}\Vec{v} = \Vec{0}
+$$
+
+Detta är samma sak som om vi hade gaussat och kommit fram till totalmatrisen
+
+$$
+\begin{pmatrix}[cc|c]
+    0 & 1 & 0\\
+    0 & 0 & 0
+\end{pmatrix}
+$$
+
+Vad betyder detta? Jo om vi läser första raden ser vi att, $0x + 1y = 0$ vilket betyder att x kan vara vad som helst men y måste vara 0. Detta betyder att egenvektorer som hör till egenvärdet 1 tillhör
+
+$$span\{\colvec{1\\0}\}$$
+
+\subsolution{b}
+En bas för $\Rn{2}$ kräver ju 2 linjärt oberoende vektorer, och vi har bara en linjärt oberoende egenvektor, så det går inte i det här fallet.
+
+\subsolution{c}
+En diagonalisering kräver en inverterbar matris $P$ med egenvektorerna som kolumner, och eftersom att vi bara har en egenvektor kommer vi inte kunna skapa en sådan.
+
+\end{solution}
+\end{document}

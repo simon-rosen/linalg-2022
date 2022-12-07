@@ -1,0 +1,20 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{1}
+
+En egenvektor till en matris ändrar inte riktning efter multiplikation med denna matris. Vi testar 
+
+$$
+\begin{pmatrix}
+    1 & 0 & 0\\
+    0 & 1 & 1\\
+    2 & 1 & 1
+\end{pmatrix} \colvec{1\\1\\1\\} = 
+\colvec{1 + 0 + 0\\0 + 1 + 1\\2 +1 +1} = 
+\colvec{1\\2\\4}
+$$
+
+Den här nya vektorn har uppenbarligen ändrat riktning under multiplikationen med $A$, så (1, 1, 1) kan inte vara en egenvektor till $A$.
+
+\end{solution}
+\end{document}

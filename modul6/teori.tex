@@ -1,4 +1,131 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
+\begin{definition}{Egenvektor}
+En egenvektor $\Vec{v}$ för en matris $A$ är en vektor som bevarar sin riktning under en linjär avbildning med avbildningsmatris $A$. Detta skrivs
+
+$$
+T(\Vec{v}) = A\Vec{v} = \lambda \cdot \Vec{v}
+$$
+
+Alltså, det enda som händer med $\Vec{v}$ under avbildningen är att den skalas om med någon skalfaktor $\lambda$.
+\end{definition}
+
+\begin{definition}{Egenvärde}
+Ett egenvärde $\lambda$ för en matris $A$ är skalfaktorn hos för någon av dessa \underline{egenvektorer} till A.
+\end{definition}
+
+\subsection{Metod för att ta fram egenvärden och egenvektorer till en matris}
+\subsubsection{ta fram egenvärden}
+När man vill ta fram egenvektorer till en matris $A$ börjar man alltid med att ta fram egenvärdena. Dessa fås genom att man löser matrisens \underline{karaktäristiska ekvation}
+
+$$
+det(A - \lambda E) = 0
+$$
+
+Där $\lambda$ står för ett egenvärde till matrisen och $E är enhetsmatrisen$. Vi kan utveckla detta lite. Låt oss ta en exempelmatris
+
+$$
+A = \begin{pmatrix}
+1 & 2\\
+1& 2
+\end{pmatrix}
+$$
+
+Då får vi
+
+$$
+det(A - \lambda E) = 
+det(\begin{pmatrix}
+1 & 2\\
+1 & 2
+\end{pmatrix} -
+\lambda\begin{pmatrix}
+1&0\\0&1
+\end{pmatrix}) = 
+det(
+\begin{pmatrix}
+1 - \lambda & 2\\
+1 & 2 - \lambda
+\end{pmatrix}
+)
+=
+\begin{vmatrix}
+1-\lambda & 2\\
+1 & 2 - \lambda
+\end{vmatrix} = 0
+$$
+
+Vi beräknar determinanten som vanligt och får ett polynom
+
+\begin{align*}
+(1-\lambda)(2-\lambda) - 2 = 0\\
+2 - \lambda - 2\lambda + \lambda^2 - 2 = 0\\
+\lambda^2 - 3\lambda = 0\\
+\lambda (\lambda - 3) = 0
+\end{align*}
+
+Som har lösningarna $\lambda = 0$ och $\lambda = 3$. Det här betyder att matrisen har egenvärdena 0 och 3.
+
+\subsection{Ta fram egenvektorer}
+Man kan ta fram egenvektorer till en matris när man har tagit fram dess egenvärden. Man gör detta genom att lösa ekvationen
+
+$$
+(A - \lambda E) = \Vec{0}
+$$
+
+Där man sätter in ett av de egenvärden som man har tagit fram som $\lambda$ i ekvationen. Resultatet kommer bli de egenvektorer som hör till det egenvärdet. Dessa vektorer kommer under en linjär avbildning med $A$ som avbildningsmatris att behålla sin riktning, och de kommer att skalas om med skalfaktorn $\lambda$.
+
+Låt oss fortsätta med exemplet ovan. Vi har beräknat egenvärdena till vår exempelmatris $A = \begin{pmatrix}
+    1 & 2\\
+    1 & 2
+\end{pmatrix}$ till 0 och 3. Vi får nu använda dessa egenvärden för att ta fram de egenvektorer som hör till dessa
+
+\underline{\textbf{fallet när }$\lambda = 0$}\\
+
+\begin{align*}
+    (A - \lambda E) = \vec{0}\\
+    \begin{pmatrix}
+        1 & 2\\
+        1 & 2
+    \end{pmatrix} - 
+    \begin{pmatrix}
+        0\lambda & 0\\
+        0 & 0\lambda
+    \end{pmatrix} = \vec{0}\\
+    \begin{pmatrix}
+        1 & 2\\
+        1 & 2
+    \end{pmatrix} = \Vec{0}
+\end{align*}
+
+Det här kan vi lösa med gaussning
+
+$$
+\begin{pmatrix}[cc|c]
+    1 & 2 & 0\\
+    1 & 2 & 0\\
+\end{pmatrix} \skipgauss
+\begin{pmatrix}
+    1 & 2 & 0\\
+    0 & 0 & 0
+\end{pmatrix}
+$$
+
+Lösningsmängden till det här ekvationssystemet blir 
+
+$$
+\colvec{x\\y} = t\colvec{-2\\1}, t\in\Rn{}
+$$
+
+Detta bildar en linje i $\Rn{2}$, och alla vektorer som tillhör den är egenvektorer till $A$ med egenvärdet 0.
+
+
+\underline{\textbf{fallet när }$\lambda = 0$}\\
+
+Man gör på samma sätt när man vill beräkna de egenvektorer som hör till egenvärdet 3. 
+
+När man har beräknat de egenvektorer som hör till respektive egenvärde är man klar, då har man tagit fram matrisens egenvektorer. 
+
+\subsection{Diagonalisering}
 
 \end{document}
