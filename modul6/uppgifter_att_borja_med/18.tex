@@ -1,0 +1,69 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{18}
+
+(I den här modulen är det viktigt att man förstår egenvektorer osv. Uppgift 18 och 19 är inte så relaterade till det. Kvadratiska former återkommer dock i flervarren så det här blir inte sista gången ni ser dom.)
+
+\subsolution{a}
+
+$Q(x, y) = x^2 + 6xy + 4y^2 = xx + 6xy + 4yy$ är en kvadratisk form eftersom att varje term har grad 2. När vi skriver den på matrisform vill vi ha en matris så att ekvationen nedan uppfylls
+
+$$
+\begin{pmatrix}
+x & y
+\end{pmatrix} \begin{pmatrix}
+a_{11} & a_{12}\\
+a_{21} & a_{22}
+\end{pmatrix} \colvec{x\\y}
+= x^2 + 6xy + y^2
+$$
+
+(Notera att matrismultiplikationen fungerar eftersom att vi har en kolonnvektor till höger och en radvektor till vänster)
+
+Vi kan utveckla uttrycket lite så blir det enklare att se varför svaret blir som det blir
+
+$$
+\begin{pmatrix}
+x & y
+\end{pmatrix} \begin{pmatrix}
+a_{11} & a_{12}\\
+a_{21} & a_{22}
+\end{pmatrix} \colvec{x\\y}=
+\begin{pmatrix}
+x & y
+\end{pmatrix} \colvec{a_{11}x + a_{12}y\\a_{21}x + a_{22}y} =
+a_{11}x^2 + a_{12}xy + a_{21}xy + a_{22}y^2
+$$
+%ny rad
+$
+= x^2 + 6xy + 4y^2
+$
+
+Från detta kan vi direkt bestämma värdena på konstanterna $a_{11} = 1$ och $a_{22} = 4$. Vi ser även att $a_{12}xy + a_{21}xy = 6xy$, och eftersom att matriser som beskriver kvadratiska former ska vara symmetriska kan vi även bestämma  $a_{12} = a_{21} = 3$. 
+
+\svar{Matrisen som är associerad till $Q$ är $\begin{pmatrix}
+1 & 3\\
+3 & 4
+\end{pmatrix}$}
+
+\subsolution{b}
+
+Först lite om begreppen
+\begin{itemize}
+    \item \textit{Positivt (semi-)definit} betyder att $Q(x, y) \geq 0$ för alla värden på $x$ och $y$.
+    \item \textit{Indefinit} betyder att $Q(x, y)$ antar både positiva och negativa värden när $x$ och $y$ varierar.
+    \item \textit{Negativt (semi-)definit} betyder att $Q(x, y) \leq 0$ för alla värden på $x$ och $y$.
+\end{itemize}
+
+(positivt definit är egentligen $Q(x, y) > 0$ (strikt större), och positivt semidefinit är $Q(x, y) \geq 0$)
+
+Vi kan undersöka $Q(x, y) = x^2 + 6xy + 4y^2$. Termerna $x^2$ och $y^2$ Kommer bara kunna anta positiva värden (eller 0) men termen $6xy$ kommer kunna anta både positiva och negativa värden. Några exempel:
+\begin{itemize}
+    \item $Q(1,1) = 1^2 + 6\cdot1\cdot1 + 4\cdot 1^2 = 11 > 0$
+    \item $Q(1,-1) = 1^2 + 6\cdot1\cdot(-1) + 4\cdot 1^2 = -1 < 0$
+\end{itemize}
+
+Alltså, $Q(x, y)$ kan anta både positiva och negativa värden och är därav \textit{indefinit}.
+
+\end{solution}
+\end{document}

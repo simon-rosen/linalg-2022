@@ -1,0 +1,33 @@
+\documentclass[../../main.tex]{subfiles}
+\begin{document}
+\begin{solution}{13}
+
+Vi börjar med att beräkna egenvärdena till $A$
+
+$$
+\begin{vmatrix}
+    1 - \lambda & 1 & 1\\
+    1 & 1 - \lambda & 1 \\
+    1 & 1 & 1 - \lambda
+\end{vmatrix} = \{\text{kofaktorutvecklar längs första kolummnen}\} = $$
+%ny rad
+$
+(1 - \lambda) \begin{vmatrix}
+    1 - \lambda & 1\\
+    1 & 1 - \lambda
+\end{vmatrix} - 1\begin{vmatrix}
+    1 & 1\\
+    1 & 1 - \lambda
+\end{vmatrix} + 
+1\begin{vmatrix}
+    1 & 1\\
+    1 - \lambda & 1
+\end{vmatrix}$
+% ny rad
+\\\\
+$ 
+= (1 - \lambda)[(1 - \lambda)^2 - 1] - 1[(1- \lambda) - 1] + 1[1 - (1 - \lambda)]
+$
+
+\end{solution}
+\end{document}
